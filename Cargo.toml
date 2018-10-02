@@ -6,3 +6,4 @@ authors = ["Ryan Chipman <ryan@ryanchipman.com>"]
 [dependencies]
 rocket = "0.3.17"
 rocket_codegen = "0.3.17"
+diesel = { version = "<= 1.2", features = ["sqlite", "r2d2"] }
