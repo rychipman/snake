@@ -4,12 +4,7 @@
 extern crate rocket;
 #[macro_use] extern crate diesel;
 
-table! {
-    greetings (id) {
-        id -> Nullable<Integer>,
-        text -> Text,
-    }
-}
+mod schema;
 
 use std::ops::Deref;
 
@@ -59,14 +54,14 @@ fn index() -> String {
 
 #[get("/dynamic")]
 fn dynamic(conn: DbConn) -> String {
-    use greetings::dsl::*;
+    use schema::greetings::dsl::*;
     let res = greetings.select(text).load::<String>(&*conn).unwrap();
     format!("{:?}", res)
 }
 
 #[post("/greeting", data = "<input>")]
 fn set_greeting(input: String, conn: DbConn) -> String {
-    use greetings::dsl::*;
+    use schema::greetings::dsl::*;
     let res = insert_into(greetings)
         .values(text.eq(input.clone()))
         .execute(&*conn);
