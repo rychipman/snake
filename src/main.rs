@@ -18,6 +18,7 @@ use rocket::http::Status;
 use rocket::request::{self,FromRequest};
 
 use diesel::prelude::*;
+use diesel::insert_into;
 use diesel::sqlite::SqliteConnection;
 use diesel::r2d2::{ConnectionManager, Pool, PooledConnection};
 
@@ -64,8 +65,15 @@ fn dynamic(conn: DbConn) -> String {
 }
 
 #[post("/greeting", data = "<input>")]
-fn set_greeting(input: String) -> String {
-    String::from("TODO: failed")
+fn set_greeting(input: String, conn: DbConn) -> String {
+    use greetings::dsl::*;
+    let res = insert_into(greetings)
+        .values(text.eq(input.clone()))
+        .execute(&*conn);
+    match res {
+        Ok(_) => String::from("success!"),
+        Err(_) => String::from("failed"),
+    }
 }
 
 fn rocket() -> Rocket {
