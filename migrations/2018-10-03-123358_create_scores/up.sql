@@ -1,0 +1,5 @@
+CREATE TABLE scores (
+  id INTEGER PRIMARY KEY NOT NULL,
+  score INTEGER NOT NULL,
+  email TEXT
+)
