@@ -22,15 +22,13 @@ use std::path::{Path,PathBuf};
 
 #[derive(Serialize)]
 struct TemplateCtx {
-    title: String,
     scores: Vec<ScoreQuery>,
 }
 
 #[get("/")]
 fn index(conn: db::Conn) -> Template {
     let ctx = TemplateCtx{
-        title: String::from("My Title"),
-        scores: Score::all(conn.handler()),
+        scores: Score::top(10, conn.handler()),
     };
     Template::render("index", &ctx)
 }

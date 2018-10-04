@@ -2,7 +2,7 @@ use diesel::prelude::*;
 use diesel::insert_into;
 
 use super::schema::scores;
-use super::schema::scores::dsl::{scores as all_scores};
+use super::schema::scores::dsl::{scores as all_scores, score as scores_score};
 
 #[derive(Insertable, Deserialize)]
 #[table_name = "scores"]
@@ -23,7 +23,18 @@ pub struct Score ();
 
 impl Score {
     pub fn all(conn: &SqliteConnection) -> Vec<ScoreQuery> {
-        all_scores.load::<ScoreQuery>(conn).unwrap()
+        all_scores
+            .order(scores_score.desc())
+            .load::<ScoreQuery>(conn)
+            .unwrap()
+    }
+
+    pub fn top(limit: i64, conn: &SqliteConnection) -> Vec<ScoreQuery> {
+        all_scores
+            .order(scores_score.desc())
+            .limit(limit)
+            .load::<ScoreQuery>(conn)
+            .unwrap()
     }
 
     pub fn insert(score: ScoreInsert, conn: &SqliteConnection) -> bool {
