@@ -35,13 +35,13 @@ fn index(conn: db::Conn) -> Template {
 
 #[get("/game/<path..>", rank = 1)]
 fn game_files(path: PathBuf) -> Option<NamedFile> {
-    let path = Path::new("/Users/ryan/git/personal/snake/game/").join(path);
+    let path = Path::new("game/").join(path);
     NamedFile::open(path).ok()
 }
 
 #[get("/<path..>", rank = 2)]
 fn files(path: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("/Users/ryan/git/personal/snake/static/").join(path)).ok()
+    NamedFile::open(Path::new("static/").join(path)).ok()
 }
 
 #[post("/scores/new", format = "application/json", data = "<score>")]
