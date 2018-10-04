@@ -2,7 +2,7 @@
 #![plugin(rocket_codegen)]
 
 extern crate rocket;
-#[macro_use] extern crate rocket_contrib;
+extern crate rocket_contrib;
 #[macro_use] extern crate diesel;
 #[macro_use] extern crate serde_derive;
 
@@ -12,8 +12,8 @@ mod models;
 
 use models::Score;
 
-use rocket::{Rocket};
-use rocket_contrib::{Json, Value};
+use rocket::Rocket;
+use rocket_contrib::Json;
 
 #[get("/")]
 fn index() -> String {
@@ -36,13 +36,12 @@ fn set_greeting(input: String, conn: db::Conn) -> String {
 }
 
 #[post("/scores/new", format = "application/json", data = "<score>")]
-fn add_score(score: Json<Score>) -> Json<Value> {
-    let score = score.0;
-    Json(json!({
-        "status": "failure",
-        "error": "db insertion not yet implemented",
-        "message": format!("got score with email {}", score.email.unwrap())
-    }))
+fn add_score(score: Json<Score>, conn: db::Conn) -> String {
+    let ok = score.0.insert(conn.handler());
+    match ok {
+        true => String::from("success!"),
+        false => String::from("failed"),
+    }
 }
 
 #[get("/scores")]

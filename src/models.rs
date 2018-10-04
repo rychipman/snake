@@ -18,6 +18,13 @@ impl Score {
     pub fn all(conn: &SqliteConnection) -> Vec<Score> {
         all_scores.load::<Score>(conn).unwrap()
     }
+
+    pub fn insert(&self, conn: &SqliteConnection) -> bool {
+        insert_into(scores::table)
+            .values(self)
+            .execute(conn)
+            .is_ok()
+    }
 }
 
 #[derive(Queryable, Insertable, Debug)]
