@@ -28,7 +28,7 @@ struct TemplateCtx {
 #[get("/")]
 fn index(conn: db::Conn) -> Template {
     let ctx = TemplateCtx{
-        scores: Score::top(10, conn.handler()),
+        scores: Score::top(10, conn.handler()).unwrap(),
     };
     Template::render("index", &ctx)
 }
@@ -46,16 +46,16 @@ fn files(path: PathBuf) -> Option<NamedFile> {
 
 #[post("/scores/new", format = "application/json", data = "<score>")]
 fn add_score(score: Json<ScoreInsert>, conn: db::Conn) -> String {
-    let ok = Score::insert(score.0, conn.handler());
-    match ok {
-        true => String::from("success!"),
-        false => String::from("failed"),
+    let res = Score::insert(score.0, conn.handler());
+    match res {
+        Ok(count) => format!("success! {} rows inserted", count),
+        Err(err) => format!("failed: {}", err),
     }
 }
 
 #[get("/scores")]
 fn get_scores(conn: db::Conn) -> String {
-    format!("all scores: {:?}", Score::all(conn.handler()))
+    format!("all scores: {:?}", Score::all(conn.handler()).unwrap())
 }
 
 fn rocket() -> Rocket {

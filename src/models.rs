@@ -1,3 +1,4 @@
+use std::error::Error;
 use diesel::prelude::*;
 use diesel::insert_into;
 
@@ -22,25 +23,22 @@ pub struct ScoreQuery {
 pub struct Score ();
 
 impl Score {
-    pub fn all(conn: &SqliteConnection) -> Vec<ScoreQuery> {
+    pub fn all(conn: &SqliteConnection) -> Result<Vec<ScoreQuery>, impl Error> {
         all_scores
             .order(scores_score.desc())
             .load::<ScoreQuery>(conn)
-            .unwrap()
     }
 
-    pub fn top(limit: i64, conn: &SqliteConnection) -> Vec<ScoreQuery> {
+    pub fn top(limit: i64, conn: &SqliteConnection) -> Result<Vec<ScoreQuery>, impl Error> {
         all_scores
             .order(scores_score.desc())
             .limit(limit)
             .load::<ScoreQuery>(conn)
-            .unwrap()
     }
 
-    pub fn insert(score: ScoreInsert, conn: &SqliteConnection) -> bool {
+    pub fn insert(score: ScoreInsert, conn: &SqliteConnection) -> Result<usize, impl Error> {
         insert_into(scores::table)
             .values(score)
             .execute(conn)
-            .is_ok()
     }
 }
