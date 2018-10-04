@@ -2,17 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>{{title}}</title>
+    <title>Snake</title>
   </head>
   <body>
-    <h1>{{title}}</h1>
-    <h3>Here are your scores:</h3>
+    <h1>Snake</h1>
+
+    <div id="snake-frame"></div>
+
+    <h3>Leaderboard:</h3>
     <ul>
       {{#each scores}}
       <li>{{score}} ({{email}})</li>
       {{/each}}
     </ul>
-    <div id="snake-frame"></div>
+
     <script src="/static/game/vendor/phaser.min.js"></script>
     <script src="/static/game/js/util.js"></script>
     <script src="/static/game/js/menu.js"></script>
