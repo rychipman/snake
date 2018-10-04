@@ -25,9 +25,7 @@ fn index() -> String {
 
 #[get("/dynamic")]
 fn dynamic(conn: db::Conn) -> String {
-    use schema::greetings::dsl::*;
-    let res = greetings.select(text).load::<String>(conn.handler()).unwrap();
-    format!("{:?}", res)
+    format!("all greetings: {:?}", models::Greeting::all(conn.handler()))
 }
 
 #[post("/greeting", data = "<input>")]
