@@ -41,14 +41,19 @@ fn add_score(score: Json<Score>) -> Json<Value> {
     Json(json!({
         "status": "failure",
         "error": "db insertion not yet implemented",
-        "message": format!("got score with email {}", score.email)
+        "message": format!("got score with email {}", score.email.unwrap())
     }))
+}
+
+#[get("/scores")]
+fn get_scores(conn: db::Conn) -> String {
+    format!("all scores: {:?}", models::Score::all(conn.handler()))
 }
 
 fn rocket() -> Rocket {
     rocket::ignite()
         .manage(db::init_pool())
-        .mount("/", routes![index,dynamic,set_greeting,add_score])
+        .mount("/", routes![index,dynamic,set_greeting,add_score,get_scores])
 }
 
 fn main() {
