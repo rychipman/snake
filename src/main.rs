@@ -1,4 +1,5 @@
 #![feature(plugin)]
+#![feature(custom_attribute)]
 #![plugin(rocket_codegen)]
 #![allow(proc_macro_derive_resolution_fallback)]
 
@@ -11,7 +12,7 @@ mod schema;
 mod db;
 mod models;
 
-use models::Score;
+use models::{Score,ScoreInsert,ScoreQuery};
 
 use rocket::Rocket;
 use rocket::response::NamedFile;
@@ -22,7 +23,7 @@ use std::path::{Path,PathBuf};
 #[derive(Serialize)]
 struct TemplateCtx {
     title: String,
-    scores: Vec<Score>,
+    scores: Vec<ScoreQuery>,
 }
 
 #[get("/")]
@@ -46,8 +47,8 @@ fn files(path: PathBuf) -> Option<NamedFile> {
 }
 
 #[post("/scores/new", format = "application/json", data = "<score>")]
-fn add_score(score: Json<Score>, conn: db::Conn) -> String {
-    let ok = score.0.insert(conn.handler());
+fn add_score(score: Json<ScoreInsert>, conn: db::Conn) -> String {
+    let ok = Score::insert(score.0, conn.handler());
     match ok {
         true => String::from("success!"),
         false => String::from("failed"),
@@ -56,7 +57,7 @@ fn add_score(score: Json<Score>, conn: db::Conn) -> String {
 
 #[get("/scores")]
 fn get_scores(conn: db::Conn) -> String {
-    format!("all scores: {:?}", models::Score::all(conn.handler()))
+    format!("all scores: {:?}", Score::all(conn.handler()))
 }
 
 fn rocket() -> Rocket {

@@ -15,7 +15,6 @@ Score = new Phaser.Class({
 		console.log("submitting score: " + this.score);
 
 		var data = {
-			id: 2,
 			score: this.score,
 			email: 'anonymous',
 		};
