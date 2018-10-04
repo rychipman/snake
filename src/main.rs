@@ -34,13 +34,13 @@ fn index(conn: db::Conn) -> Template {
     Template::render("index", &ctx)
 }
 
-#[get("/static/game/<path..>", rank = 1)]
+#[get("/game/<path..>", rank = 1)]
 fn game_files(path: PathBuf) -> Option<NamedFile> {
     let path = Path::new("/Users/ryan/git/personal/snake-web/game/").join(path);
     NamedFile::open(path).ok()
 }
 
-#[get("/static/<path..>", rank = 2)]
+#[get("/<path..>", rank = 2)]
 fn files(path: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("/Users/ryan/git/personal/snake-web/static/").join(path)).ok()
 }
@@ -62,7 +62,9 @@ fn get_scores(conn: db::Conn) -> String {
 fn rocket() -> Rocket {
     rocket::ignite()
         .manage(db::init_pool())
-        .mount("/", routes![index,files,game_files,add_score,get_scores])
+        .mount("/", routes![index])
+        .mount("/static", routes![files,game_files])
+        .mount("/api", routes![add_score,get_scores])
         .attach(Template::fairing())
 }
 
