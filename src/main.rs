@@ -14,7 +14,10 @@ mod models;
 use models::Score;
 
 use rocket::Rocket;
+use rocket::response::NamedFile;
 use rocket_contrib::{Json,Template};
+
+use std::path::{Path,PathBuf};
 
 #[derive(Serialize)]
 struct TemplateCtx {
@@ -29,6 +32,11 @@ fn index(conn: db::Conn) -> Template {
         scores: Score::all(conn.handler()),
     };
     Template::render("index", &ctx)
+}
+
+#[get("/static/<path..>")]
+fn files(path: PathBuf) -> Option<NamedFile> {
+    NamedFile::open(Path::new("/Users/ryan/git/personal/snake-web/static/").join(path)).ok()
 }
 
 #[post("/scores/new", format = "application/json", data = "<score>")]
@@ -48,7 +56,7 @@ fn get_scores(conn: db::Conn) -> String {
 fn rocket() -> Rocket {
     rocket::ignite()
         .manage(db::init_pool())
-        .mount("/", routes![index,add_score,get_scores])
+        .mount("/", routes![index,files,add_score,get_scores])
         .attach(Template::fairing())
 }
 
