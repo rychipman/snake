@@ -15,9 +15,6 @@ use models::Score;
 use rocket::{Rocket};
 use rocket_contrib::{Json, Value};
 
-use diesel::prelude::*;
-use diesel::insert_into;
-
 #[get("/")]
 fn index() -> String {
     String::from("Hello, world!")
@@ -30,13 +27,11 @@ fn dynamic(conn: db::Conn) -> String {
 
 #[post("/greeting", data = "<input>")]
 fn set_greeting(input: String, conn: db::Conn) -> String {
-    use schema::greetings::dsl::*;
-    let res = insert_into(greetings)
-        .values(text.eq(input.clone()))
-        .execute(conn.handler());
-    match res {
-        Ok(_) => String::from("success!"),
-        Err(_) => String::from("failed"),
+    let msg = models::Greeting{ id: None, text: input };
+    let ok = models::Greeting::insert(msg, conn.handler());
+    match ok {
+        true => String::from("success!"),
+        false => String::from("failed"),
     }
 }
 
