@@ -41,6 +41,7 @@ function update (time, delta) {
 
     if (!snake.alive) {
 		menu.stop();
+		score.submit();
         return;
     }
 

@@ -10,4 +10,19 @@ Score = new Phaser.Class({
 		this.score = this.score + 1;
 		this.text.setText('Score: ' + this.score);
 	},
+
+	submit: function() {
+		console.log("submitting score: " + this.score);
+
+		var data = {
+			id: 2,
+			score: this.score,
+			email: 'anonymous',
+		};
+
+		var request = new XMLHttpRequest();
+		request.open('POST', '/scores/new', true);
+		request.setRequestHeader('Content-Type', 'application/json');
+		request.send(JSON.stringify(data));
+	},
 })
