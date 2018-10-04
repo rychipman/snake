@@ -7,7 +7,7 @@ use rocket::{State,Request,Outcome};
 
 type ConnManager = ConnectionManager<SqliteConnection>;
 type ConnPool = Pool<ConnManager>;
-static DATABASE_URL: &'static str = "/Users/ryan/git/personal/snake-web/tmp/db.sqlite";
+static DATABASE_URL: &'static str = "/Users/ryan/git/personal/snake/tmp/db.sqlite";
 
 pub fn init_pool() -> ConnPool {
     let manager = ConnManager::new(DATABASE_URL);

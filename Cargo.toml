@@ -1,5 +1,5 @@
 [package]
-name = "snake-web"
+name = "snake"
 version = "0.1.0"
 authors = ["Ryan Chipman <ryan@ryanchipman.com>"]
 
