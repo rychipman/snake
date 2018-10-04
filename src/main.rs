@@ -14,7 +14,22 @@ mod models;
 use models::Score;
 
 use rocket::Rocket;
-use rocket_contrib::Json;
+use rocket_contrib::{Json,Template};
+
+#[derive(Serialize)]
+struct TemplateCtx {
+    title: String,
+    scores: Vec<Score>,
+}
+
+#[get("/")]
+fn index(conn: db::Conn) -> Template {
+    let ctx = TemplateCtx{
+        title: String::from("My Title"),
+        scores: Score::all(conn.handler()),
+    };
+    Template::render("index", &ctx)
+}
 
 #[post("/scores/new", format = "application/json", data = "<score>")]
 fn add_score(score: Json<Score>, conn: db::Conn) -> String {
@@ -33,7 +48,8 @@ fn get_scores(conn: db::Conn) -> String {
 fn rocket() -> Rocket {
     rocket::ignite()
         .manage(db::init_pool())
-        .mount("/", routes![add_score,get_scores])
+        .mount("/", routes![index,add_score,get_scores])
+        .attach(Template::fairing())
 }
 
 fn main() {
