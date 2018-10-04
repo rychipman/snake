@@ -1,5 +1,6 @@
 #![feature(plugin)]
 #![plugin(rocket_codegen)]
+#![allow(proc_macro_derive_resolution_fallback)]
 
 extern crate rocket;
 extern crate rocket_contrib;
