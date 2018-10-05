@@ -109,5 +109,5 @@ var game = new Phaser.Game({
     height: 480,
     backgroundColor: '#eeeeee',
     parent: 'snake-frame',
-	scene: [ GameScene ],
+	scene: [ MenuScene, GameScene ],
 });

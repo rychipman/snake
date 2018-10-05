@@ -16,6 +16,7 @@ MenuScene = new Phaser.Class({
 		bg.on('pointerover', function (event) { bg.setFrame('splash/hover'); });
 		bg.on('pointerout', function (event) { bg.setFrame('splash/base'); });
 		bg.on('pointerdown', function (event) {
+			this.scene.start('gameScene');
 		}, this);
     },
 
