@@ -27,6 +27,7 @@ GameScene = new Phaser.Class({
 			if (!this.scoreSent) {
 				this.score.submit();
 				this.scoreSent = true;
+				this.scene.start('leaderboardScene');
 			}
 			return;
 		}
@@ -109,5 +110,5 @@ var game = new Phaser.Game({
     height: 480,
     backgroundColor: '#eeeeee',
     parent: 'snake-frame',
-	scene: [ MenuScene, GameScene ],
+	scene: [ MenuScene, GameScene, LeaderboardScene ],
 });
