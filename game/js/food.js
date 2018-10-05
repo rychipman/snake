@@ -19,7 +19,7 @@ Food = new Phaser.Class({
         this.total++;
 
         var x = Phaser.Math.Between(0, 39);
-        var y = Phaser.Math.Between(0, 39);
+        var y = Phaser.Math.Between(0, 29);
 
         this.setPosition(x * 16, y * 16);
     },

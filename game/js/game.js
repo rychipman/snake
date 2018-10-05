@@ -1,7 +1,7 @@
 var config = {
     type: Phaser.WEBGL,
     width: 640,
-    height: 640,
+    height: 480,
     backgroundColor: '#f79e2e',
     parent: 'snake-frame',
     scene: {
