@@ -1,31 +1,16 @@
 
-Menu = new Phaser.Class({
+MenuScene = new Phaser.Class({
+	Extends: Phaser.Scene,
 
-    initialize: function (scene) {
-		this.started = false;
-		this.finished = false;
-		this.text = scene.add.text(50, 50, 'press space to start', { fontSize: '32px', fill: '#000000' });
-    },
+	preload: function () {
+		this.load.atlas('sprites', '/static/game/assets/sprites.png', '/static/game/assets/sprites.json');
+	},
 
-    start: function () {
-		if (this.started) {
-			console.log('cannot start already-started game');
-			return;
-		}
-		this.started = true;
-		this.text.setText('');
-    },
-
-    stop: function () {
-		if (!this.started) {
-			console.log('cannot stop started game that is not started');
-			return;
-		} else if (this.finished) {
-			console.log('cannot stop finished game');
-			return;
-		}
-		this.finished = true;
-		this.text.setText('Game Over');
+    create: function () {
+		var bg = this.add.image(320, 240, 'sprites', 'splash/base');
+		bg.setInteractive();
+		bg.on('pointerover', function (event) { bg.setFrame('splash/hover'); });
+		bg.on('pointerout', function (event) { bg.setFrame('splash/base'); });
     },
 
 });

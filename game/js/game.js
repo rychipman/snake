@@ -4,11 +4,7 @@ var config = {
     height: 480,
     backgroundColor: '#f79e2e',
     parent: 'snake-frame',
-    scene: {
-        preload: preload,
-        create: create,
-        update: update
-    }
+	scene: [ MenuScene ],
 };
 
 var snake;
@@ -21,7 +17,6 @@ function preload () {
 
 function create () {
 
-	menu = new Menu(this);
 	score = new Score(this, 10, 10);
     food = new Food(this, 3, 4);
     snake = new Snake(this, 8, 8);
