@@ -12,11 +12,9 @@ Score = new Phaser.Class({
 	},
 
 	submit: function() {
-		console.log("submitting score: " + this.score);
-
 		var data = {
 			score: this.score,
-			email: 'anonymous',
+			email: highScoreName,
 		};
 
 		var request = new XMLHttpRequest();

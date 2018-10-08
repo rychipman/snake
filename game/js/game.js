@@ -24,12 +24,18 @@ GameScene = new Phaser.Class({
 
 	update: function (time, delta) {
 		if (!this.snake.alive) {
-			if (!this.scoreSent) {
-				this.add.text(50, 50, 'press space to continue', { fontSize: '32px', fill: '#000' });
-				this.score.submit();
-				this.scoreSent = true;
+			if (!this.continueMessagePosted) {
+				this.add.text(50, 50, 'press space to submit score and continue', { fontSize: '32px', fill: '#000' });
+				this.continueMessagePosted = true;
 			}
 			if (this.cursors.space.isDown) {
+				highScoreName = null
+				highScoreName = prompt("Enter email address for leaderboard");
+				if (!highScoreName) {
+					highScoreName = 'Anonymous';
+				}
+
+				this.score.submit();
 				this.scene.start('leaderboardScene');
 			}
 			return;
