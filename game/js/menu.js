@@ -34,13 +34,25 @@ LeaderboardScene = new Phaser.Class({
 	},
 
     create: function () {
+		this.cursors = this.input.keyboard.createCursorKeys();
 		var scores = window.highScores;
-		this.add.text(16, 16, 'High Scores', { fontSize: '32px', color: '#000' });
+		this.add.text(16, 16, 'High Scores (space to exit)', { fontSize: '32px', color: '#000' });
 		for (var i=0; i<scores.length; i++) {
 			var item = scores[i];
 			var txt = 'score: ' + item.score + ', email: ' + item.email;
 			this.add.text(16, 50 + 16*i, txt, { fontSize: "16px", color: '#000' });
 		}
     },
+
+	update: function (time, delta) {
+		if (!this.startTime) {
+			this.startTime = time;
+		}
+		if (time > this.startTime + 1000) {
+			if (this.cursors.space.isDown) {
+				this.scene.start('menuScene');
+			}
+		}
+	},
 
 });
