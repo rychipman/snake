@@ -4,7 +4,7 @@
 #![allow(proc_macro_derive_resolution_fallback)]
 
 extern crate rocket;
-extern crate rocket_contrib;
+#[macro_use] extern crate rocket_contrib;
 #[macro_use] extern crate diesel;
 #[macro_use] extern crate serde_derive;
 
@@ -16,7 +16,7 @@ use models::{Score,ScoreInsert,ScoreQuery};
 
 use rocket::Rocket;
 use rocket::response::NamedFile;
-use rocket_contrib::{Json,Template};
+use rocket_contrib::{Json,Template,Value};
 
 use std::path::{Path,PathBuf};
 
@@ -45,11 +45,19 @@ fn files(path: PathBuf) -> Option<NamedFile> {
 }
 
 #[post("/scores/new", format = "application/json", data = "<score>")]
-fn add_score(score: Json<ScoreInsert>, conn: db::Conn) -> String {
+fn add_score(score: Json<ScoreInsert>, conn: db::Conn) -> Json<Value> {
     let res = Score::insert(score.0, conn.handler());
+    let high_scores = Score::top(10, conn.handler()).unwrap();
     match res {
-        Ok(count) => format!("success! {} rows inserted", count),
-        Err(err) => format!("failed: {}", err),
+        Ok(_count) => Json(json!({
+            "status": "success",
+            "id": 2,
+            "highScores": high_scores
+        })),
+        Err(err) => Json(json!({
+            "status": "failed",
+            "reason": err.to_string()
+        })),
     }
 }
 

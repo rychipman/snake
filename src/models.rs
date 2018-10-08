@@ -5,7 +5,7 @@ use diesel::insert_into;
 use super::schema::scores;
 use super::schema::scores::dsl::{scores as all_scores, score as scores_score};
 
-#[derive(Insertable, Deserialize)]
+#[derive(Insertable, Serialize, Deserialize)]
 #[table_name = "scores"]
 pub struct ScoreInsert {
     pub id: Option<i32>,
