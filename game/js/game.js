@@ -25,8 +25,11 @@ GameScene = new Phaser.Class({
 	update: function (time, delta) {
 		if (!this.snake.alive) {
 			if (!this.scoreSent) {
+				this.add.text(50, 50, 'press space to continue', { fontSize: '32px', fill: '#000' });
 				this.score.submit();
 				this.scoreSent = true;
+			}
+			if (this.cursors.space.isDown) {
 				this.scene.start('leaderboardScene');
 			}
 			return;
