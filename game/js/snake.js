@@ -114,7 +114,19 @@ Snake = new Phaser.Class({
         var newPart = this.body.create(this.balls.x, this.balls.y, 'sprites', 'snake/body');
         newPart.setOrigin(0);
 		this.body.remove(this.balls, true, true);
-		this.balls = this.body.create(this.tail.x, this.tail.y, 'sprites', 'snake/tail/left');
+
+		var sprite;
+		if (this.tail.x > this.balls.x) {
+			sprite = 'snake/tail/left';
+		} else if (this.tail.x < this.balls.x) {
+			sprite = 'snake/tail/right';
+		} else if (this.tail.y > this.balls.x) {
+			sprite = 'snake/tail/down';
+		} else if (this.tail.y < this.balls.x) {
+			sprite = 'snake/tail/up';
+		}
+
+		this.balls = this.body.create(this.tail.x, this.tail.y, 'sprites', sprite);
     },
 
     collideWithFood: function (food) {
