@@ -12,7 +12,7 @@ GameScene = new Phaser.Class({
 	},
 
 	create: function () {
-		this.add.image(0, 0, 'sprites', 'bg/board');
+		this.board = this.add.image(0, 0, 'sprites', 'bg/board/board');
 
 		this.score = new Score(this, 10, 10);
 		this.scoreSent = false;
@@ -29,7 +29,7 @@ GameScene = new Phaser.Class({
 			if (!this.continueMessagePosted) {
 				var me = this;
 
-				this.add.text(50, 50, 'press space to continue', { fontSize: '32px', fill: '#000' });
+				this.board.setFrame('bg/board/dead');
 				this.input.keyboard.once('keydown_SPACE', function() {
 					highScoreName = null
 					highScoreName = prompt("Enter email address for leaderboard");
