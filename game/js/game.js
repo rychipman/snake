@@ -31,11 +31,7 @@ GameScene = new Phaser.Class({
 
 				this.board.setFrame('bg/board/dead');
 				this.input.keyboard.once('keydown_SPACE', function() {
-					highScoreName = null
-					highScoreName = prompt("Enter email address for leaderboard");
-					if (!highScoreName) {
-						highScoreName = 'Anonymous';
-					}
+					highScoreName = 'Anonymous';
 					me.score.submit();
 					me.scene.start('leaderboardScene');
 				});
