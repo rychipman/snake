@@ -36,5 +36,6 @@ Score = new Phaser.Class({
 		};
 
 		request.send(JSON.stringify(data));
+		yourscore = this.score;
 	},
 })
