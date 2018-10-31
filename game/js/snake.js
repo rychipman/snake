@@ -86,7 +86,20 @@ Snake = new Phaser.Class({
 
 	die: function() {
 		this.alive = false;
-		this.head.setFrame('snake/head/dead');
+		switch (this.direction) {
+		case UP:
+			this.head.setFrame('snake/head/dead/up');
+			break;
+		case DOWN:
+			this.head.setFrame('snake/head/dead/down');
+			break;
+		case RIGHT:
+			this.head.setFrame('snake/head/dead/right');
+			break;
+		case LEFT:
+			this.head.setFrame('snake/head/dead/left');
+			break;
+		}
 	},
 
     grow: function () {

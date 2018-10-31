@@ -110,7 +110,7 @@
 					}
 				},
 				{
-					"filename": "snake/head/down",
+					"filename": "snake/head/dead/down",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -135,7 +135,7 @@
 					}
 				},
 				{
-					"filename": "snake/head/left",
+					"filename": "snake/head/dead/left",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -160,7 +160,7 @@
 					}
 				},
 				{
-					"filename": "snake/head/right",
+					"filename": "snake/head/dead/right",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -185,7 +185,7 @@
 					}
 				},
 				{
-					"filename": "snake/head/up",
+					"filename": "snake/head/dead/up",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -210,7 +210,7 @@
 					}
 				},
 				{
-					"filename": "snake/tail/down",
+					"filename": "snake/head/down",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -235,7 +235,7 @@
 					}
 				},
 				{
-					"filename": "snake/tail/left",
+					"filename": "snake/head/left",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -260,7 +260,7 @@
 					}
 				},
 				{
-					"filename": "snake/tail/right",
+					"filename": "snake/head/right",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -285,7 +285,7 @@
 					}
 				},
 				{
-					"filename": "snake/tail/up",
+					"filename": "snake/head/up",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -310,6 +310,106 @@
 					}
 				},
 				{
+					"filename": "snake/tail/down",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 24
+					},
+					"frame": {
+						"x": 235,
+						"y": 683,
+						"w": 24,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "snake/tail/left",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 24
+					},
+					"frame": {
+						"x": 261,
+						"y": 683,
+						"w": 24,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "snake/tail/right",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 24
+					},
+					"frame": {
+						"x": 287,
+						"y": 683,
+						"w": 24,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "snake/tail/up",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 24,
+						"h": 24
+					},
+					"frame": {
+						"x": 313,
+						"y": 683,
+						"w": 24,
+						"h": 24
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
 					"filename": "food/money",
 					"rotated": false,
 					"trimmed": true,
@@ -324,7 +424,7 @@
 						"h": 23
 					},
 					"frame": {
-						"x": 235,
+						"x": 339,
 						"y": 683,
 						"w": 22,
 						"h": 23
@@ -340,6 +440,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:eb262dc155950662df1c9476928938a2:e0d8d26dabb7b7f7219779e9d6abe058:af6e57a991ea0b4b415dbcb7eb72ce12$"
+		"smartupdate": "$TexturePacker:SmartUpdate:a5859581748a1b377e79704c08b9d9e1:72e7e2ed712b80795ce2c5b8abef0e89:af6e57a991ea0b4b415dbcb7eb72ce12$"
 	}
 }
