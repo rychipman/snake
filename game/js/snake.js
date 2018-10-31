@@ -151,7 +151,7 @@ Snake = new Phaser.Class({
             food.eat();
 
             //  For every 5 items of food eaten we'll increase the snake speed a little
-            if (this.speed > 20 && food.total % 5 === 0) {
+            if (this.speed > 20 && food.total % 3 === 0) {
                 this.speed -= 5;
             }
 
