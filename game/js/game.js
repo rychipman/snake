@@ -119,8 +119,8 @@ GameScene = new Phaser.Class({
 
 var game = new Phaser.Game({
     type: Phaser.WEBGL,
-    width: 1080,
-    height: 1080,
+    width: 680,
+    height: 680,
     backgroundColor: '#eeeeee',
     parent: 'snake-frame',
 	scene: [ MenuScene, GameScene, LeaderboardScene ],
