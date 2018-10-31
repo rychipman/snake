@@ -85,7 +85,26 @@ Snake = new Phaser.Class({
         }
 
         //  Update the body segments
+		var lastBod = this.body.getChildren()[this.body.getChildren().length-2];
         Phaser.Actions.ShiftPosition(this.body.getChildren(), px.x, px.y, 1, this.tail);
+
+		var oldX = this.balls.x;
+		var oldY = this.balls.y;
+
+		var newX = lastBod.x;
+		var newY = lastBod.y;
+
+		var sprite;
+		if (oldX > newX) {
+			sprite = 'snake/tail/left';
+		} else if (oldX < newX) {
+			sprite = 'snake/tail/right';
+		} else if (oldY > newY) {
+			sprite = 'snake/tail/up';
+		} else if (oldY < newY) {
+			sprite = 'snake/tail/down';
+		}
+		this.balls.setFrame(sprite);
 
 		//  Update the timer ready for the next movement
 		this.moveTime = time + this.speed;
@@ -120,10 +139,10 @@ Snake = new Phaser.Class({
 			sprite = 'snake/tail/left';
 		} else if (this.tail.x < this.balls.x) {
 			sprite = 'snake/tail/right';
-		} else if (this.tail.y > this.balls.x) {
-			sprite = 'snake/tail/down';
-		} else if (this.tail.y < this.balls.x) {
+		} else if (this.tail.y > this.balls.y) {
 			sprite = 'snake/tail/up';
+		} else if (this.tail.y < this.balls.y) {
+			sprite = 'snake/tail/down';
 		}
 
 		this.balls = this.body.create(this.tail.x, this.tail.y, 'sprites', sprite);
