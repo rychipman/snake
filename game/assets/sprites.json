@@ -4,8 +4,8 @@
 			"image": "sprites-0.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 1082,
-				"h": 1167
+				"w": 2046,
+				"h": 735
 			},
 			"scale": 1,
 			"frames": [
@@ -14,20 +14,20 @@
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 1080,
-						"h": 1080
+						"w": 680,
+						"h": 680
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 1080,
-						"h": 1080
+						"w": 680,
+						"h": 680
 					},
 					"frame": {
 						"x": 1,
 						"y": 1,
-						"w": 1080,
-						"h": 1080
+						"w": 680,
+						"h": 680
 					},
 					"anchor": {
 						"x": 0,
@@ -35,78 +35,53 @@
 					}
 				},
 				{
-					"filename": "head/left",
+					"filename": "scores",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
-						"w": 167,
-						"h": 167
+						"w": 680,
+						"h": 680
 					},
 					"spriteSourceSize": {
-						"x": 38,
-						"y": 25,
-						"w": 96,
-						"h": 83
+						"x": 0,
+						"y": 0,
+						"w": 680,
+						"h": 680
 					},
 					"frame": {
-						"x": 1,
-						"y": 1083,
-						"w": 96,
-						"h": 83
+						"x": 683,
+						"y": 1,
+						"w": 680,
+						"h": 680
 					},
 					"anchor": {
-						"x": 0.5,
-						"y": 0.5
+						"x": 0,
+						"y": 0
 					}
 				},
 				{
-					"filename": "money",
+					"filename": "splash/splash",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
-						"w": 132,
-						"h": 132
+						"w": 680,
+						"h": 680
 					},
 					"spriteSourceSize": {
-						"x": 38,
-						"y": 31,
-						"w": 61,
-						"h": 61
+						"x": 0,
+						"y": 0,
+						"w": 680,
+						"h": 680
 					},
 					"frame": {
-						"x": 99,
-						"y": 1083,
-						"w": 61,
-						"h": 61
+						"x": 1365,
+						"y": 1,
+						"w": 680,
+						"h": 680
 					},
 					"anchor": {
-						"x": 0.5,
-						"y": 0.5
-					}
-				},
-				{
-					"filename": "body",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 110,
-						"h": 110
-					},
-					"spriteSourceSize": {
-						"x": 39,
-						"y": 25,
-						"w": 55,
-						"h": 54
-					},
-					"frame": {
-						"x": 162,
-						"y": 1083,
-						"w": 55,
-						"h": 54
-					},
-					"anchor": {
-						"x": 0.5,
-						"y": 0.5
+						"x": 0,
+						"y": 0
 					}
 				},
 				{
@@ -124,8 +99,8 @@
 						"h": 51
 					},
 					"frame": {
-						"x": 219,
-						"y": 1083,
+						"x": 1,
+						"y": 683,
 						"w": 51,
 						"h": 51
 					},
@@ -133,77 +108,80 @@
 						"x": 0.5,
 						"y": 0.5
 					}
-				}
-			]
-		},
-		{
-			"image": "sprites-1.png",
-			"format": "RGBA8888",
-			"size": {
-				"w": 1082,
-				"h": 1082
-			},
-			"scale": 1,
-			"frames": [
+				},
 				{
-					"filename": "scores",
+					"filename": "body",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 1080,
-						"h": 1080
+						"w": 24,
+						"h": 24
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 1080,
-						"h": 1080
+						"w": 24,
+						"h": 24
 					},
 					"frame": {
-						"x": 1,
-						"y": 1,
-						"w": 1080,
-						"h": 1080
+						"x": 54,
+						"y": 683,
+						"w": 24,
+						"h": 24
 					},
 					"anchor": {
-						"x": 0,
-						"y": 0
+						"x": 0.5,
+						"y": 0.5
 					}
-				}
-			]
-		},
-		{
-			"image": "sprites-2.png",
-			"format": "RGBA8888",
-			"size": {
-				"w": 1082,
-				"h": 1082
-			},
-			"scale": 1,
-			"frames": [
+				},
 				{
-					"filename": "splash/splash",
+					"filename": "head/left",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 1080,
-						"h": 1080
+						"w": 24,
+						"h": 24
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 1080,
-						"h": 1080
+						"w": 24,
+						"h": 24
 					},
 					"frame": {
-						"x": 1,
-						"y": 1,
-						"w": 1080,
-						"h": 1080
+						"x": 80,
+						"y": 683,
+						"w": 24,
+						"h": 24
 					},
 					"anchor": {
-						"x": 0,
-						"y": 0
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "money",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 24,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 22,
+						"h": 23
+					},
+					"frame": {
+						"x": 106,
+						"y": 683,
+						"w": 22,
+						"h": 23
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
 					}
 				}
 			]
@@ -212,6 +190,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:a8d087291db49fee9265e28fdc779042:67daee00f38b44639c78c095044e9c64:35af87d006d1d2336ffc5b26fd8e7375$"
+		"smartupdate": "$TexturePacker:SmartUpdate:7163cd792b9000c5dfddd2c88d45e3e3:15dca368df898a7f97bbfc7549393d4e:af6e57a991ea0b4b415dbcb7eb72ce12$"
 	}
 }
