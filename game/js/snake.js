@@ -52,17 +52,17 @@ Snake = new Phaser.Class({
 
             case RIGHT:
                 this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x + 1, 0, 40);
-				this.head.setFrame('head/left');
+				this.head.setFrame('head/right');
                 break;
 
             case UP:
                 this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y - 1, 0, 30);
-				this.head.setFrame('head/left');
+				this.head.setFrame('head/up');
                 break;
 
             case DOWN:
                 this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y + 1, 0, 30);
-				this.head.setFrame('head/left');
+				this.head.setFrame('head/down');
                 break;
         }
 
