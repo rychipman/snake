@@ -15,8 +15,9 @@ Snake = new Phaser.Class({
         mid.setOrigin(0);
 
 		var pxt = coordsToPx(x+2, y);
-        var tail = this.body.create(pxt.x, pxt.y, 'sprites', 'snake/tail/left');
-        tail.setOrigin(0);
+        this.balls = this.body.create(pxt.x, pxt.y, 'sprites', 'snake/tail/left');
+        this.balls.setOrigin(0);
+
         this.tail = new Phaser.Geom.Point(pxt.x, pxt.y);
 
         this.alive = true;
@@ -110,9 +111,10 @@ Snake = new Phaser.Class({
 	},
 
     grow: function () {
-        var newPart = this.body.create(this.tail.x, this.tail.y, 'sprites', 'snake/body');
-
+        var newPart = this.body.create(this.balls.x, this.balls.y, 'sprites', 'snake/body');
         newPart.setOrigin(0);
+		this.body.remove(this.balls, true, true);
+		this.balls = this.body.create(this.tail.x, this.tail.y, 'sprites', 'snake/tail/left');
     },
 
     collideWithFood: function (food) {
