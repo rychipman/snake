@@ -7,7 +7,8 @@ Food = new Phaser.Class({
         Phaser.GameObjects.Image.call(this, scene)
 
         this.setTexture('sprites', 'money');
-        this.setPosition(x * 16, y * 16);
+		var px = coordsToPx(x, y);
+        this.setPosition(px.x, px.y);
         this.setOrigin(0);
 
         this.total = 0;
@@ -18,10 +19,11 @@ Food = new Phaser.Class({
     eat: function () {
         this.total++;
 
-        var x = Phaser.Math.Between(0, 39);
-        var y = Phaser.Math.Between(0, 29);
+        var x = Phaser.Math.Between(0, GRID_DIM);
+        var y = Phaser.Math.Between(0, GRID_DIM);
 
-        this.setPosition(x * 16, y * 16);
+		var px = coordsToPx(x, y);
+        this.setPosition(px.x, px.y);
     },
 
 });

@@ -6,12 +6,13 @@ Snake = new Phaser.Class({
 
         this.body = scene.add.group();
 
-        this.head = this.body.create(x * 16, y * 16, 'sprites', 'head/left');
+		var px = coordsToPx(x, y);
+        this.head = this.body.create(px.x, px.y, 'sprites', 'head/left');
         this.head.setOrigin(0);
 
         this.alive = true;
 
-        this.speed = 100;
+        this.speed = 160;
 
         this.moveTime = 0;
 
@@ -46,36 +47,37 @@ Snake = new Phaser.Class({
         switch (this.heading)
         {
             case LEFT:
-                this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x - 1, 0, 40);
+                this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x - 1, 0, GRID_DIM);
 				this.head.setFrame('head/left');
                 break;
 
             case RIGHT:
-                this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x + 1, 0, 40);
+                this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x + 1, 0, GRID_DIM);
 				this.head.setFrame('head/right');
                 break;
 
             case UP:
-                this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y - 1, 0, 30);
+                this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y - 1, 0, GRID_DIM);
 				this.head.setFrame('head/up');
                 break;
 
             case DOWN:
-                this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y + 1, 0, 30);
+                this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y + 1, 0, GRID_DIM);
 				this.head.setFrame('head/down');
                 break;
         }
 
         this.direction = this.heading;
 
-        var willHitBody = Phaser.Actions.GetFirst(this.body.getChildren(), { x: this.headPosition.x*16, y: this.headPosition.y*16 }, 1);
+		var px = coordsToPx(this.headPosition.x, this.headPosition.y);
+        var willHitBody = Phaser.Actions.GetFirst(this.body.getChildren(), px, 1);
         if (willHitBody) {
 			this.die();
             return false;
         }
 
         //  Update the body segments
-        Phaser.Actions.ShiftPosition(this.body.getChildren(), this.headPosition.x * 16, this.headPosition.y * 16, 1, this.tail);
+        Phaser.Actions.ShiftPosition(this.body.getChildren(), px.x, px.y, 1, this.tail);
 
 		//  Update the timer ready for the next movement
 		this.moveTime = time + this.speed;
@@ -116,8 +118,8 @@ Snake = new Phaser.Class({
         //  Remove all body pieces from valid positions list
         this.body.children.each(function (segment) {
 
-            var bx = segment.x / 16;
-            var by = segment.y / 16;
+            var bx = pxToCoord(segment.x);
+            var by = pxToCoord(segment.y);
 
             grid[by][bx] = false;
 
