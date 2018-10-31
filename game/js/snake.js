@@ -7,7 +7,7 @@ Snake = new Phaser.Class({
         this.body = scene.add.group();
 
 		var px = coordsToPx(x, y);
-        this.head = this.body.create(px.x, px.y, 'sprites', 'head/left');
+        this.head = this.body.create(px.x, px.y, 'sprites', 'snake/head/left');
         this.head.setOrigin(0);
 
         this.alive = true;
@@ -48,22 +48,22 @@ Snake = new Phaser.Class({
         {
             case LEFT:
                 this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x - 1, 0, GRID_DIM);
-				this.head.setFrame('head/left');
+				this.head.setFrame('snake/head/left');
                 break;
 
             case RIGHT:
                 this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x + 1, 0, GRID_DIM);
-				this.head.setFrame('head/right');
+				this.head.setFrame('snake/head/right');
                 break;
 
             case UP:
                 this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y - 1, 0, GRID_DIM);
-				this.head.setFrame('head/up');
+				this.head.setFrame('snake/head/up');
                 break;
 
             case DOWN:
                 this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y + 1, 0, GRID_DIM);
-				this.head.setFrame('head/down');
+				this.head.setFrame('snake/head/down');
                 break;
         }
 
@@ -86,11 +86,11 @@ Snake = new Phaser.Class({
 
 	die: function() {
 		this.alive = false;
-		this.head.setFrame('head/left');
+		this.head.setFrame('snake/head/dead');
 	},
 
     grow: function () {
-        var newPart = this.body.create(this.tail.x, this.tail.y, 'sprites', 'body');
+        var newPart = this.body.create(this.tail.x, this.tail.y, 'sprites', 'snake/body');
 
         newPart.setOrigin(0);
     },

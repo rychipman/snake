@@ -12,10 +12,10 @@ MenuScene = new Phaser.Class({
 	},
 
     create: function () {
-		var bg = this.add.image(0, 0, 'sprites', 'splash/splash');
+		var bg = this.add.image(0, 0, 'sprites', 'bg/splash/splash');
 		bg.setInteractive();
-		bg.on('pointerover', function (event) { bg.setFrame('splash/splash'); });
-		bg.on('pointerout', function (event) { bg.setFrame('splash/splash'); });
+		bg.on('pointerover', function (event) { bg.setFrame('bg/splash/splash'); });
+		bg.on('pointerout', function (event) { bg.setFrame('bg/splash/splash'); });
 		bg.on('pointerdown', function (event) {
 			this.scene.start('gameScene');
 		}, this);
@@ -36,7 +36,7 @@ LeaderboardScene = new Phaser.Class({
 	},
 
     create: function () {
-		this.add.image(0, 0, 'sprites', 'scores');
+		this.add.image(0, 0, 'sprites', 'bg/scores');
 		this.cursors = this.input.keyboard.createCursorKeys();
 		var scores = window.highScores;
 		this.title = this.add.text(16, 16, 'High Scores (press space to exit)', { fontSize: '32px', color: '#FFF' });

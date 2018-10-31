@@ -12,7 +12,7 @@ GameScene = new Phaser.Class({
 	},
 
 	create: function () {
-		this.add.image(0, 0, 'sprites', 'board');
+		this.add.image(0, 0, 'sprites', 'bg/board');
 
 		this.score = new Score(this, 10, 10);
 		this.scoreSent = false;

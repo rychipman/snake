@@ -10,7 +10,7 @@
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "board",
+					"filename": "bg/board",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -35,7 +35,7 @@
 					}
 				},
 				{
-					"filename": "scores",
+					"filename": "bg/scores",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -60,7 +60,7 @@
 					}
 				},
 				{
-					"filename": "splash/splash",
+					"filename": "bg/splash/splash",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -85,7 +85,7 @@
 					}
 				},
 				{
-					"filename": "body",
+					"filename": "snake/body",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -105,12 +105,12 @@
 						"h": 24
 					},
 					"anchor": {
-						"x": 0.5,
-						"y": 0.5
+						"x": 0,
+						"y": 0
 					}
 				},
 				{
-					"filename": "head/down",
+					"filename": "snake/head/down",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -135,7 +135,7 @@
 					}
 				},
 				{
-					"filename": "head/left",
+					"filename": "snake/head/left",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -155,12 +155,12 @@
 						"h": 24
 					},
 					"anchor": {
-						"x": 0.5,
-						"y": 0.5
+						"x": 0,
+						"y": 0
 					}
 				},
 				{
-					"filename": "head/right",
+					"filename": "snake/head/right",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -185,7 +185,7 @@
 					}
 				},
 				{
-					"filename": "head/up",
+					"filename": "snake/head/up",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -210,7 +210,7 @@
 					}
 				},
 				{
-					"filename": "tail/down",
+					"filename": "snake/tail/down",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -235,7 +235,7 @@
 					}
 				},
 				{
-					"filename": "tail/left",
+					"filename": "snake/tail/left",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -260,7 +260,7 @@
 					}
 				},
 				{
-					"filename": "tail/right",
+					"filename": "snake/tail/right",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -285,7 +285,7 @@
 					}
 				},
 				{
-					"filename": "tail/up",
+					"filename": "snake/tail/up",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -310,7 +310,7 @@
 					}
 				},
 				{
-					"filename": "money",
+					"filename": "food/money",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -330,8 +330,8 @@
 						"h": 23
 					},
 					"anchor": {
-						"x": 0.5,
-						"y": 0.5
+						"x": 0,
+						"y": 0
 					}
 				}
 			]
@@ -340,6 +340,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:558a6850ca5446316f9f27f169531b31:5e69b9b21295c368a26bfa62f147ba76:af6e57a991ea0b4b415dbcb7eb72ce12$"
+		"smartupdate": "$TexturePacker:SmartUpdate:eb262dc155950662df1c9476928938a2:e0d8d26dabb7b7f7219779e9d6abe058:af6e57a991ea0b4b415dbcb7eb72ce12$"
 	}
 }
