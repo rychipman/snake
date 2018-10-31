@@ -6,9 +6,18 @@ Snake = new Phaser.Class({
 
         this.body = scene.add.group();
 
-		var px = coordsToPx(x, y);
-        this.head = this.body.create(px.x, px.y, 'sprites', 'snake/head/left');
+		var pxh = coordsToPx(x, y);
+        this.head = this.body.create(pxh.x, pxh.y, 'sprites', 'snake/head/left');
         this.head.setOrigin(0);
+
+		var pxb = coordsToPx(x+1, y);
+        var mid = this.body.create(pxb.x, pxb.y, 'sprites', 'snake/body');
+        mid.setOrigin(0);
+
+		var pxt = coordsToPx(x+2, y);
+        var tail = this.body.create(pxt.x, pxt.y, 'sprites', 'snake/tail/left');
+        tail.setOrigin(0);
+        this.tail = new Phaser.Geom.Point(pxt.x, pxt.y);
 
         this.alive = true;
 
@@ -16,10 +25,8 @@ Snake = new Phaser.Class({
 
         this.moveTime = 0;
 
-        this.tail = new Phaser.Geom.Point(x, y);
-
-        this.heading = RIGHT;
-        this.direction = RIGHT;
+        this.heading = LEFT;
+        this.direction = LEFT;
     },
 
     update: function (time) {
