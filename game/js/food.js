@@ -9,7 +9,6 @@ Food = new Phaser.Class({
         this.setTexture('sprites', 'food/money');
 		var px = coordsToPx(x, y);
         this.setPosition(px.x, px.y);
-        this.setOrigin(0);
 
         this.total = 0;
 

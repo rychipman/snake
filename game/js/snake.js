@@ -8,15 +8,12 @@ Snake = new Phaser.Class({
 
 		var pxh = coordsToPx(x, y);
         this.head = this.body.create(pxh.x, pxh.y, 'sprites', 'snake/head/left');
-        this.head.setOrigin(0);
 
 		var pxb = coordsToPx(x+1, y);
         var mid = this.body.create(pxb.x, pxb.y, 'sprites', 'snake/body');
-        mid.setOrigin(0);
 
 		var pxt = coordsToPx(x+2, y);
         this.balls = this.body.create(pxt.x, pxt.y, 'sprites', 'snake/tail/left');
-        this.balls.setOrigin(0);
 
         this.tail = new Phaser.Geom.Point(pxt.x, pxt.y);
 
@@ -131,7 +128,6 @@ Snake = new Phaser.Class({
 
     grow: function () {
         var newPart = this.body.create(this.balls.x, this.balls.y, 'sprites', 'snake/body');
-        newPart.setOrigin(0);
 		this.body.remove(this.balls, true, true);
 
 		var sprite;
