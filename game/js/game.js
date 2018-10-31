@@ -7,11 +7,13 @@ GameScene = new Phaser.Class({
 	},
 
 	preload: function () {
-		this.load.atlas('sprites', '/static/game/assets/sprites.png', '/static/game/assets/sprites.json');
+		this.load.setPath('/static/game/assets/');
+		this.load.multiatlas('sprites', 'sprites.json');
 	},
 
-
 	create: function () {
+		this.add.image(0, 0, 'sprites', 'board');
+
 		this.score = new Score(this, 10, 10);
 		this.scoreSent = false;
 
@@ -117,8 +119,8 @@ GameScene = new Phaser.Class({
 
 var game = new Phaser.Game({
     type: Phaser.WEBGL,
-    width: 640,
-    height: 480,
+    width: 1080,
+    height: 1080,
     backgroundColor: '#eeeeee',
     parent: 'snake-frame',
 	scene: [ MenuScene, GameScene, LeaderboardScene ],

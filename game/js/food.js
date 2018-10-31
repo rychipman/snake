@@ -6,7 +6,7 @@ Food = new Phaser.Class({
     initialize: function (scene, x, y) {
         Phaser.GameObjects.Image.call(this, scene)
 
-        this.setTexture('sprites', 'food');
+        this.setTexture('sprites', 'money');
         this.setPosition(x * 16, y * 16);
         this.setOrigin(0);
 
