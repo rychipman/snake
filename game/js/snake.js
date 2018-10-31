@@ -52,22 +52,22 @@ Snake = new Phaser.Class({
         switch (this.heading)
         {
             case LEFT:
-                this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x - 1, 0, GRID_DIM);
+                this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x - 1, 0, GRID_DIM_X);
 				this.head.setFrame('snake/head/left');
                 break;
 
             case RIGHT:
-                this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x + 1, 0, GRID_DIM);
+                this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x + 1, 0, GRID_DIM_X);
 				this.head.setFrame('snake/head/right');
                 break;
 
             case UP:
-                this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y - 1, 0, GRID_DIM);
+                this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y - 1, 0, GRID_DIM_Y);
 				this.head.setFrame('snake/head/up');
                 break;
 
             case DOWN:
-                this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y + 1, 0, GRID_DIM);
+                this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y + 1, 0, GRID_DIM_Y);
 				this.head.setFrame('snake/head/down');
                 break;
         }
@@ -167,8 +167,8 @@ Snake = new Phaser.Class({
         //  Remove all body pieces from valid positions list
         this.body.children.each(function (segment) {
 
-            var bx = pxToCoord(segment.x);
-            var by = pxToCoord(segment.y);
+            var bx = pxToCoordX(segment.x);
+            var by = pxToCoordY(segment.y);
 
             grid[by][bx] = false;
 

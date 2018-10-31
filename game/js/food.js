@@ -18,8 +18,8 @@ Food = new Phaser.Class({
     eat: function () {
         this.total++;
 
-        var x = Phaser.Math.Between(0, GRID_DIM);
-        var y = Phaser.Math.Between(0, GRID_DIM);
+        var x = Phaser.Math.Between(0, GRID_DIM_X);
+        var y = Phaser.Math.Between(0, GRID_DIM_Y);
 
 		var px = coordsToPx(x, y);
         this.setPosition(px.x, px.y);

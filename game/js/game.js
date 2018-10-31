@@ -79,10 +79,10 @@ GameScene = new Phaser.Class({
 		//  A Grid we'll use to reposition the food each time it's eaten
 		var testGrid = [];
 
-		for (var y = 0; y < GRID_DIM; y++) {
+		for (var y = 0; y < GRID_DIM_Y; y++) {
 			testGrid[y] = [];
 
-			for (var x = 0; x < GRID_DIM; x++) {
+			for (var x = 0; x < GRID_DIM_X; x++) {
 				testGrid[y][x] = true;
 			}
 		}
@@ -92,8 +92,8 @@ GameScene = new Phaser.Class({
 		//  Purge out false positions
 		var validLocations = [];
 
-		for (var y = 0; y < GRID_DIM; y++) {
-			for (var x = 0; x < GRID_DIM; x++) {
+		for (var y = 0; y < GRID_DIM_Y; y++) {
+			for (var x = 0; x < GRID_DIM_X; x++) {
 				if (testGrid[y][x] === true) {
 					//  Is this position valid for food? If so, add it here ...
 					validLocations.push({ x: x, y: y });
