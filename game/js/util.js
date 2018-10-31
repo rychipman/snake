@@ -5,11 +5,11 @@ DOWN = 1;
 LEFT = -2;
 RIGHT = 2;
 
-GRID_DIM_X = 21;
-GRID_DIM_Y = 21;
-OFFSET_X = 88;
-OFFSET_Y = 88;
-GRID_SIZE = 24;
+GRID_DIM_X = 25;
+GRID_DIM_Y = 24;
+OFFSET_X = 96;
+OFFSET_Y = 86;
+GRID_SIZE = 20;
 
 function coordsToPx(x, y) {
 	return {
