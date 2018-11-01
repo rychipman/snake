@@ -22,6 +22,8 @@ GameScene = new Phaser.Class({
 
 		//  Create our keyboard controls
 		this.cursors = this.input.keyboard.createCursorKeys();
+
+		this.continueMessagePosted = false;
 	},
 
 	update: function (time, delta) {
