@@ -47,8 +47,9 @@ GameScene = new Phaser.Class({
 
 				this.board.setFrame('bg/board/dead');
 				this.input.keyboard.once('keydown_SPACE', function() {
-					highScoreName = 'Anonymous';
-					me.score.submit(function() { me.scene.start('leaderboardScene') });
+					yourscore = me.score.score;
+					me.score.submit();
+					me.scene.start('leaderboardScene');
 				});
 
 				this.continueMessagePosted = true;

@@ -12,7 +12,7 @@ Score = new Phaser.Class({
 	submit: function(callback) {
 		var data = {
 			score: this.score,
-			email: highScoreName,
+			email: 'no email recorded',
 		};
 
 		var request = new XMLHttpRequest();
@@ -37,6 +37,5 @@ Score = new Phaser.Class({
 		};
 
 		request.send(JSON.stringify(data));
-		yourscore = this.score;
 	},
 })
