@@ -2,7 +2,7 @@
 Score = new Phaser.Class({
 
 	initialize: function (scene, x, y) {
-		this.score = 0;
+		this.score = 3;
 	},
 
 	increment: function () {
