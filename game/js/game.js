@@ -44,13 +44,15 @@ GameScene = new Phaser.Class({
 		if (!this.snake.alive) {
 			if (!this.continueMessagePosted) {
 				var me = this;
-
-				this.board.setFrame('bg/board/dead');
-				this.input.keyboard.once('keydown_SPACE', function() {
+				var nextScene = function() {
 					yourscore = me.score.score;
 					me.score.submit();
 					me.scene.start('leaderboardScene');
-				});
+				};
+
+				this.board.setFrame('bg/board/dead');
+				this.input.keyboard.once('keydown_SPACE', nextScene);
+				this.input.on('pointerdown', nextScene);
 
 				this.continueMessagePosted = true;
 			}

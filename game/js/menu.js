@@ -50,9 +50,12 @@ LeaderboardScene = new Phaser.Class({
 		this.add.text(16, 48, 'Your Score: ' + window.yourscore, { fontSize: '16px', color: '#FFF' });
 
 		var me = this;
-		this.input.keyboard.once('keydown_SPACE', function() {
+		var nextScene = function() {
 			me.scene.start('menuScene');
-		});
+		};
+
+		this.input.keyboard.once('keydown_SPACE', nextScene);
+		this.input.on('pointerdown', nextScene);
     },
 
 });
