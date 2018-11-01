@@ -20,8 +20,9 @@ GameScene = new Phaser.Class({
 		this.food = new Food(this, 3, 4);
 		this.snake = new Snake(this, 8, 8);
 
-		//  Create our keyboard controls
+		//  Create our keyboard and touch controls
 		this.cursors = this.input.keyboard.createCursorKeys();
+		this.pointer = this.input.activePointer;
 
 		this.continueMessagePosted = false;
 	},
@@ -50,6 +51,36 @@ GameScene = new Phaser.Class({
 			this.snake.changeDirection(UP);
 		} else if (this.cursors.down.isDown) {
 			this.snake.changeDirection(DOWN);
+		} else if (this.pointer.isDown) {
+			var touchX = this.pointer.x;
+			var touchY = this.pointer.y;
+
+			var snakeX = coordToPxX(this.snake.headPosition.x);
+			var snakeY = coordToPxY(this.snake.headPosition.y);
+
+			var newDirection;
+			switch (this.snake.direction) {
+			case UP:
+			case DOWN:
+				if (touchX > snakeX) {
+					newDirection = RIGHT;
+				} else {
+					newDirection = LEFT;
+				}
+				break;
+			case RIGHT:
+			case LEFT:
+				if (touchY > snakeY) {
+					newDirection = DOWN;
+				} else {
+					newDirection = UP;
+				}
+				break;
+			}
+
+			if (newDirection) {
+				this.snake.changeDirection(newDirection);
+			}
 		}
 
 		if (this.snake.update(time)) {
