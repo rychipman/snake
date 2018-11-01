@@ -22,7 +22,20 @@ GameScene = new Phaser.Class({
 
 		//  Create our keyboard and touch controls
 		this.cursors = this.input.keyboard.createCursorKeys();
-		this.pointer = this.input.activePointer;
+
+		var me = this;
+		this.input.on('pointerdown', function(ptr) {
+			me.downX = ptr.x;
+			me.downY = ptr.y;
+		});
+		this.input.on('pointerup', function(ptr) {
+			upX = ptr.x;
+			upY = ptr.y;
+			me.swipeDX = upX - me.downX;
+			me.swipeDY = upY - me.downY;
+			console.log('(dx, dy) = ('+me.swipeDX+', '+me.swipeDY+')');
+			me.swiped = true;
+		});
 
 		this.continueMessagePosted = false;
 	},
@@ -51,18 +64,13 @@ GameScene = new Phaser.Class({
 			this.snake.changeDirection(UP);
 		} else if (this.cursors.down.isDown) {
 			this.snake.changeDirection(DOWN);
-		} else if (this.pointer.isDown) {
-			var touchX = this.pointer.x;
-			var touchY = this.pointer.y;
-
-			var snakeX = coordToPxX(this.snake.headPosition.x);
-			var snakeY = coordToPxY(this.snake.headPosition.y);
+		} else if (this.swiped) {
 
 			var newDirection;
 			switch (this.snake.direction) {
 			case UP:
 			case DOWN:
-				if (touchX > snakeX) {
+				if (this.swipeDX > 0) {
 					newDirection = RIGHT;
 				} else {
 					newDirection = LEFT;
@@ -70,13 +78,15 @@ GameScene = new Phaser.Class({
 				break;
 			case RIGHT:
 			case LEFT:
-				if (touchY > snakeY) {
+				if (this.swipeDY > 0) {
 					newDirection = DOWN;
 				} else {
 					newDirection = UP;
 				}
 				break;
 			}
+
+			this.swiped = false;
 
 			if (newDirection) {
 				this.snake.changeDirection(newDirection);
