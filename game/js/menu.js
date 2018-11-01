@@ -22,6 +22,11 @@ MenuScene = new Phaser.Class({
 		z.on('pointerdown', function (event) {
 			this.scene.start('gameScene');
 		}, this);
+
+		var me = this;
+		this.input.keyboard.once('keydown_SPACE', function() {
+			me.scene.start('gameScene');
+		});
     },
 
 });
