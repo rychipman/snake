@@ -9,7 +9,7 @@ Score = new Phaser.Class({
 		this.score = this.score + 1;
 	},
 
-	submit: function() {
+	submit: function(callback) {
 		var data = {
 			score: this.score,
 			email: highScoreName,
@@ -27,7 +27,8 @@ Score = new Phaser.Class({
 						console.log("score submit failed");
 					} else {
 						console.log("score submit successful");
-						highScores = data.highScores
+						highScores = data.highScores;
+						callback();
 					}
 				} else {
 					console.log("score submit failed")
