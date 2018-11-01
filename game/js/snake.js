@@ -52,27 +52,36 @@ Snake = new Phaser.Class({
         switch (this.heading)
         {
             case LEFT:
-                this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x - 1, 0, GRID_DIM_X);
+                this.headPosition.x = this.headPosition.x - 1;
 				this.head.setFrame('snake/head/left');
                 break;
 
             case RIGHT:
-                this.headPosition.x = Phaser.Math.Wrap(this.headPosition.x + 1, 0, GRID_DIM_X);
+                this.headPosition.x = this.headPosition.x + 1;
 				this.head.setFrame('snake/head/right');
                 break;
 
             case UP:
-                this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y - 1, 0, GRID_DIM_Y);
+                this.headPosition.y = this.headPosition.y - 1;
 				this.head.setFrame('snake/head/up');
                 break;
 
             case DOWN:
-                this.headPosition.y = Phaser.Math.Wrap(this.headPosition.y + 1, 0, GRID_DIM_Y);
+                this.headPosition.y = this.headPosition.y + 1;
 				this.head.setFrame('snake/head/down');
                 break;
         }
 
         this.direction = this.heading;
+
+		if (this.headPosition.x === -1 ||
+			this.headPosition.x === GRID_DIM_X ||
+			this.headPosition.y === -1 ||
+			this.headPosition.y === GRID_DIM_Y) {
+
+			this.die();
+			return false
+		}
 
 		var px = coordsToPx(this.headPosition.x, this.headPosition.y);
         var willHitBody = Phaser.Actions.GetFirst(this.body.getChildren(), px, 1);
