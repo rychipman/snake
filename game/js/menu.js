@@ -13,16 +13,11 @@ MenuScene = new Phaser.Class({
 
     create: function () {
 		var bg = this.add.image(fracToPxX(.5), 0, 'sprites', 'bg/splash/splash');
-		var z = this.add.zone(290, 541, 136, 22);
-		z.setOrigin(0, 0);
-		z.setInteractive();
-		z.on('pointerover', function (event) { bg.setFrame('bg/splash/hover'); });
-		z.on('pointerout', function (event) { bg.setFrame('bg/splash/splash'); });
-		z.on('pointerdown', function (event) {
-			this.scene.start('gameScene');
-		}, this);
 
 		var me = this;
+		this.input.on('pointerdown', function (event) {
+			me.scene.start('gameScene');
+		});
 		this.input.keyboard.once('keydown_SPACE', function() {
 			me.scene.start('gameScene');
 		});
