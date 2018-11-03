@@ -12,8 +12,7 @@ MenuScene = new Phaser.Class({
 	},
 
     create: function () {
-		var bg = this.add.image(0, 0, 'sprites', 'bg/splash/splash');
-
+		var bg = this.add.image(fracToPxX(.5), 0, 'sprites', 'bg/splash/splash');
 		var z = this.add.zone(290, 541, 136, 22);
 		z.setOrigin(0, 0);
 		z.setInteractive();
@@ -44,7 +43,7 @@ LeaderboardScene = new Phaser.Class({
 	},
 
     create: function () {
-		this.add.image(0, 0, 'sprites', 'bg/scores');
+		this.add.image(fracToPxX(.5), 0, 'sprites', 'bg/scores');
 		this.cursors = this.input.keyboard.createCursorKeys();
 		this.add.text(16, 16, '(press space to exit)', { fontSize: '16px', color: '#FFF' });
 		this.add.text(16, 48, 'Your Score: ' + window.yourscore, { fontSize: '16px', color: '#FFF' });

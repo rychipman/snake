@@ -12,7 +12,7 @@ GameScene = new Phaser.Class({
 	},
 
 	create: function () {
-		this.board = this.add.image(0, 0, 'sprites', 'bg/board/board');
+		this.board = this.add.image(fracToPxX(.5), 0, 'sprites', 'bg/board/board');
 
 		this.score = new Score(this, 10, 10);
 		this.scoreSent = false;
@@ -33,7 +33,6 @@ GameScene = new Phaser.Class({
 			upY = ptr.y;
 			me.swipeDX = upX - me.downX;
 			me.swipeDY = upY - me.downY;
-			console.log('(dx, dy) = ('+me.swipeDX+', '+me.swipeDY+')');
 			me.swiped = true;
 		});
 
@@ -161,8 +160,8 @@ GameScene = new Phaser.Class({
 
 var game = new Phaser.Game({
     type: Phaser.WEBGL,
-    width: 680,
-    height: 680,
+    width: logicalWidth,
+    height: logicalHeight,
     backgroundColor: '#eeeeee',
     parent: 'snake-frame',
 	scene: [ MenuScene, GameScene, LeaderboardScene ],
