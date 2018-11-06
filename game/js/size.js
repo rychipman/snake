@@ -21,11 +21,11 @@ function fracToPxY(frac) {
 
 var gridSquareSize = 20;
 
-var gridWidth = logicalWidth / gridSquareSize;
+var gridWidth = Math.floor(logicalWidth / gridSquareSize);
 var gridWidthPx = gridWidth * gridSquareSize;
 var gridOffsetX = (logicalWidth - gridWidthPx) / 2;
 
-var gridHeight = logicalHeight / gridSquareSize;
+var gridHeight = Math.floor(logicalHeight / gridSquareSize);
 var gridHeightPx = gridHeight * gridSquareSize;
 var gridOffsetY = (logicalHeight - gridHeightPx) / 2;
 
