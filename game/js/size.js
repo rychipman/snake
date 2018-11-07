@@ -1,7 +1,7 @@
 
 var dpr = window.devicePixelRatio;
-var logicalHeight = window.innerHeight;
-var logicalWidth = window.innerWidth;
+var logicalHeight = Math.max(window.innerHeight, 600);
+var logicalWidth = Math.max(window.innerWidth, 340);
 var pxHeight = logicalHeight * dpr;
 var pxWidth = logicalWidth * dpr;
 
@@ -19,13 +19,17 @@ function fracToPxY(frac) {
 	return frac * logicalHeight;
 }
 
+var stripImageHeight = 320;
+var stripHeight = 80;
+var stripScale = stripHeight / stripImageHeight;
+
 var gridSquareSize = 20;
 
 var gridWidth = Math.floor(logicalWidth / gridSquareSize);
 var gridWidthPx = gridWidth * gridSquareSize;
 var gridOffsetX = (logicalWidth - gridWidthPx) / 2;
 
-var gridHeight = Math.floor(logicalHeight / gridSquareSize);
+var gridHeight = Math.floor((logicalHeight - 2*stripHeight) / gridSquareSize);
 var gridHeightPx = gridHeight * gridSquareSize;
 var gridOffsetY = (logicalHeight - gridHeightPx) / 2;
 
