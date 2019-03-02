@@ -59,7 +59,6 @@ GameScene = new Phaser.Class({
 					me.scene.start('leaderboardScene');
 				};
 
-				this.board.setFrame('bg/board/dead');
 				this.input.keyboard.once('keydown_SPACE', nextScene);
 				this.input.on('pointerdown', nextScene);
 
