@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>4</int>
         <key>texturePackerVersion</key>
-        <string>4.10.0</string>
+        <string>4.12.0</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -88,9 +88,9 @@
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>4096</int>
+            <int>2048</int>
             <key>height</key>
-            <int>4096</int>
+            <int>2048</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -132,7 +132,7 @@
             <key>json</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../git/personal/snake/game/assets/sprites.json</filename>
+                <filename>game/assets/sprites.json</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -181,14 +181,67 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">../git/personal/snake/game/assets/separate/bg/board/board.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/bg/board/dead.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/bg/scores.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/bg/splash/hover.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/bg/splash/splash.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_00.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_01.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_02.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_03.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_04.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_05.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_06.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_07.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_08.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_09.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_10.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_11.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_12.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_13.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_14.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_15.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_16.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_17.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_18.png</key>
+            <key type="filename">game/assets/separate/bg/aniboard/aniboard_19.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_00.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_01.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_02.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_03.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_04.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_05.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_06.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_07.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_08.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_09.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_10.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_11.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_12.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_13.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_14.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_15.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_16.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_17.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_18.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_19.png</key>
+            <key type="filename">game/assets/separate/bg/anisplash/anisplash_20.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
-                <point_f>0.5,0</point_f>
+                <point_f>0,0</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>609,609,1218,1218</rect>
+                <key>scale9Paddings</key>
+                <rect>609,609,1218,1218</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">game/assets/separate/bg/board/board.png</key>
+            <key type="filename">game/assets/separate/bg/board/dead.png</key>
+            <key type="filename">game/assets/separate/bg/scores.png</key>
+            <key type="filename">game/assets/separate/bg/splash/hover.png</key>
+            <key type="filename">game/assets/separate/bg/splash/splash.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0,0</point_f>
                 <key>scale9Enabled</key>
                 <false/>
                 <key>scale9Borders</key>
@@ -198,20 +251,47 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../git/personal/snake/game/assets/separate/food/money.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/body.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/head/dead/down.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/head/dead/left.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/head/dead/right.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/head/dead/up.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/head/down.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/head/left.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/head/right.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/head/up.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/tail/down.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/tail/left.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/tail/right.png</key>
-            <key type="filename">../git/personal/snake/game/assets/separate/snake/tail/up.png</key>
+            <key type="filename">game/assets/separate/bg/play-snake.png</key>
+            <key type="filename">game/assets/separate/bg/play-to-win.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>110,18,219,35</rect>
+                <key>scale9Paddings</key>
+                <rect>110,18,219,35</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">game/assets/separate/bg/splash-info.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0,1</point_f>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>609,13,1218,26</rect>
+                <key>scale9Paddings</key>
+                <rect>609,13,1218,26</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">game/assets/separate/food/money.png</key>
+            <key type="filename">game/assets/separate/snake/body.png</key>
+            <key type="filename">game/assets/separate/snake/head/dead/down.png</key>
+            <key type="filename">game/assets/separate/snake/head/dead/left.png</key>
+            <key type="filename">game/assets/separate/snake/head/dead/right.png</key>
+            <key type="filename">game/assets/separate/snake/head/dead/up.png</key>
+            <key type="filename">game/assets/separate/snake/head/down.png</key>
+            <key type="filename">game/assets/separate/snake/head/left.png</key>
+            <key type="filename">game/assets/separate/snake/head/right.png</key>
+            <key type="filename">game/assets/separate/snake/head/up.png</key>
+            <key type="filename">game/assets/separate/snake/tail/down.png</key>
+            <key type="filename">game/assets/separate/snake/tail/left.png</key>
+            <key type="filename">game/assets/separate/snake/tail/right.png</key>
+            <key type="filename">game/assets/separate/snake/tail/up.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0,0</point_f>
@@ -224,36 +304,10 @@
                 <key>scale9FromFile</key>
                 <false/>
             </struct>
-            <key type="filename">../git/personal/snake/game/assets/separate/strip/bottom.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,1</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>926,80,1852,160</rect>
-                <key>scale9Paddings</key>
-                <rect>926,80,1852,160</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
-            <key type="filename">../git/personal/snake/game/assets/separate/strip/top.png</key>
-            <struct type="IndividualSpriteSettings">
-                <key>pivotPoint</key>
-                <point_f>0.5,0</point_f>
-                <key>scale9Enabled</key>
-                <false/>
-                <key>scale9Borders</key>
-                <rect>926,80,1852,160</rect>
-                <key>scale9Paddings</key>
-                <rect>926,80,1852,160</rect>
-                <key>scale9FromFile</key>
-                <false/>
-            </struct>
         </map>
         <key>fileList</key>
         <array>
-            <filename>../git/personal/snake/game/assets/separate</filename>
+            <filename>game/assets/separate</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
