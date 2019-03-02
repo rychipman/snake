@@ -12,10 +12,8 @@ GameScene = new Phaser.Class({
 	},
 
 	create: function () {
-		this.topStrip = this.add.image(fracToPxX(.5), 0, 'sprites', 'strip/top');
-		this.topStrip.setScale(stripScale, stripScale);
-		this.bottomStrip = this.add.image(fracToPxX(.5), logicalHeight, 'sprites', 'strip/bottom');
-		this.bottomStrip.setScale(stripScale, stripScale);
+		this.board = this.add.image(fracToPxX(.5), 0, 'sprites', 'strip/strip');
+		this.board.setScale(stripScale, stripScale);
 
 		this.score = new Score(this, 10, 10);
 		this.scoreSent = false;
@@ -52,7 +50,7 @@ GameScene = new Phaser.Class({
 					me.scene.start('leaderboardScene');
 				};
 
-				//this.board.setFrame('bg/board/dead');
+				this.board.setFrame('bg/board/dead');
 				this.input.keyboard.once('keydown_SPACE', nextScene);
 				this.input.on('pointerdown', nextScene);
 
