@@ -12,8 +12,7 @@ GameScene = new Phaser.Class({
 	},
 
 	create: function () {
-		this.board = this.add.image(fracToPxX(.5), 0, 'sprites', 'strip/strip');
-		this.board.setScale(stripScale, stripScale);
+		this.board = this.add.image(fracToPxX(.5), 0, 'sprites', 'bg/board/board');
 
 		this.score = new Score(this, 10, 10);
 		this.scoreSent = false;
@@ -163,7 +162,7 @@ var game = new Phaser.Game({
     type: Phaser.WEBGL,
     width: logicalWidth,
     height: logicalHeight,
-    backgroundColor: '#222222',
+    backgroundColor: '#eeeeee',
     parent: 'snake-frame',
 	scene: [ MenuScene, GameScene, LeaderboardScene ],
 });
