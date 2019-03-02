@@ -1095,11 +1095,657 @@
 					}
 				}
 			]
+		},
+		{
+			"image": "sprites-11.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_00",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/anisplash/anisplash_20",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-12.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_01",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/anisplash/anisplash_19",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-13.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_02",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/anisplash/anisplash_18",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-14.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_03",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/anisplash/anisplash_17",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-15.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_04",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/anisplash/anisplash_16",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-16.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_05",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/anisplash/anisplash_15",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-17.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_06",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/anisplash/anisplash_14",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-18.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_07",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/anisplash/anisplash_13",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-19.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_08",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/anisplash/anisplash_12",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-20.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_09",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/anisplash/anisplash_11",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-21.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/anisplash/anisplash_10",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
 		}
 	],
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:7818448700027b7edf536b8d766aca1a:ca9ced226899fbce6f663796cbfa7001:3b9f57acaa6820d69245a6432134074c$"
+		"smartupdate": "$TexturePacker:SmartUpdate:ec17578d3e59fb218c6015ab6ef13560:08563f2d506ae464886497fbf4020af9:209f199ddbc24295f08302b6b191929c$"
 	}
 }

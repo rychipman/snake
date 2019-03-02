@@ -12,7 +12,16 @@ MenuScene = new Phaser.Class({
 	},
 
     create: function () {
-		var bg = this.add.image(0, 0, 'sprites', 'bg/splash/splash');
+		var bg = this.add.sprite(0, 0, 'sprites');
+		bg.displayWidth = 680;
+		bg.displayHeight = 680;
+		this.anims.create({
+			key: 'splash',
+			frames: this.anims.generateFrameNames('sprites', { prefix: 'bg/anisplash/anisplash_', start: 0, end: 19, zeroPad: 2 }),
+			frameRate: 7,
+			repeat: -1,
+		});
+		bg.play('splash');
 
 		var me = this;
 		this.input.on('pointerdown', function (event) {
