@@ -12,7 +12,16 @@ GameScene = new Phaser.Class({
 	},
 
 	create: function () {
-		this.board = this.add.image(0, 0, 'sprites', 'bg/board/board');
+		this.board = this.add.sprite(0, 0, 'sprites');
+		this.board.displayWidth = 680;
+		this.board.displayHeight = 680;
+		this.anims.create({
+			key: 'anibg',
+			frames: this.anims.generateFrameNames('sprites', { prefix: 'bg/aniboard/aniboard_', start: 0, end: 19, zeroPad: 2 }),
+			frameRate: 7,
+			repeat: -1,
+		});
+		this.board.play('anibg');
 
 		this.score = new Score(this, 10, 10);
 		this.scoreSent = false;

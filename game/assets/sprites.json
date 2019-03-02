@@ -4,11 +4,36 @@
 			"image": "sprites-0.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 1364,
-				"h": 2046
+				"w": 3120,
+				"h": 3120
 			},
 			"scale": 1,
 			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_00",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
 				{
 					"filename": "bg/board/board",
 					"rotated": false,
@@ -25,7 +50,7 @@
 					},
 					"frame": {
 						"x": 1,
-						"y": 1,
+						"y": 2439,
 						"w": 680,
 						"h": 680
 					},
@@ -49,8 +74,8 @@
 						"h": 680
 					},
 					"frame": {
-						"x": 1,
-						"y": 683,
+						"x": 683,
+						"y": 2439,
 						"w": 680,
 						"h": 680
 					},
@@ -74,8 +99,8 @@
 						"h": 680
 					},
 					"frame": {
-						"x": 1,
-						"y": 1365,
+						"x": 1365,
+						"y": 2439,
 						"w": 680,
 						"h": 680
 					},
@@ -99,8 +124,8 @@
 						"h": 680
 					},
 					"frame": {
-						"x": 683,
-						"y": 1,
+						"x": 2047,
+						"y": 2439,
 						"w": 680,
 						"h": 680
 					},
@@ -124,8 +149,8 @@
 						"h": 680
 					},
 					"frame": {
-						"x": 683,
-						"y": 683,
+						"x": 2439,
+						"y": 1,
 						"w": 680,
 						"h": 680
 					},
@@ -149,8 +174,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 683,
-						"y": 1365,
+						"x": 2439,
+						"y": 683,
 						"w": 24,
 						"h": 24
 					},
@@ -174,8 +199,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 709,
-						"y": 1365,
+						"x": 2439,
+						"y": 709,
 						"w": 24,
 						"h": 24
 					},
@@ -199,8 +224,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 735,
-						"y": 1365,
+						"x": 2439,
+						"y": 735,
 						"w": 24,
 						"h": 24
 					},
@@ -224,8 +249,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 761,
-						"y": 1365,
+						"x": 2439,
+						"y": 761,
 						"w": 24,
 						"h": 24
 					},
@@ -249,8 +274,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 787,
-						"y": 1365,
+						"x": 2439,
+						"y": 787,
 						"w": 24,
 						"h": 24
 					},
@@ -274,8 +299,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 813,
-						"y": 1365,
+						"x": 2439,
+						"y": 813,
 						"w": 24,
 						"h": 24
 					},
@@ -299,8 +324,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 839,
-						"y": 1365,
+						"x": 2439,
+						"y": 839,
 						"w": 24,
 						"h": 24
 					},
@@ -324,8 +349,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 865,
-						"y": 1365,
+						"x": 2439,
+						"y": 865,
 						"w": 24,
 						"h": 24
 					},
@@ -349,8 +374,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 891,
-						"y": 1365,
+						"x": 2439,
+						"y": 891,
 						"w": 24,
 						"h": 24
 					},
@@ -374,8 +399,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 917,
-						"y": 1365,
+						"x": 2439,
+						"y": 917,
 						"w": 24,
 						"h": 24
 					},
@@ -399,8 +424,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 943,
-						"y": 1365,
+						"x": 2439,
+						"y": 943,
 						"w": 24,
 						"h": 24
 					},
@@ -424,8 +449,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 969,
-						"y": 1365,
+						"x": 2439,
+						"y": 969,
 						"w": 24,
 						"h": 24
 					},
@@ -449,8 +474,8 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 995,
-						"y": 1365,
+						"x": 2439,
+						"y": 995,
 						"w": 24,
 						"h": 24
 					},
@@ -474,10 +499,595 @@
 						"h": 23
 					},
 					"frame": {
-						"x": 1021,
-						"y": 1365,
+						"x": 2439,
+						"y": 1021,
 						"w": 22,
 						"h": 23
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-1.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_01",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/aniboard/aniboard_19",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-2.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_02",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/aniboard/aniboard_18",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-3.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_03",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/aniboard/aniboard_17",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-4.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_04",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/aniboard/aniboard_16",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-5.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_05",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/aniboard/aniboard_15",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-6.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_06",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/aniboard/aniboard_14",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-7.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_07",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/aniboard/aniboard_13",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-8.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_08",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/aniboard/aniboard_12",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-9.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_09",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/aniboard/aniboard_11",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
+					},
+					"anchor": {
+						"x": 0,
+						"y": 0
+					}
+				}
+			]
+		},
+		{
+			"image": "sprites-10.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 2438,
+				"h": 2438
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg/aniboard/aniboard_10",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2436,
+						"h": 2436
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2436,
+						"h": 2436
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 2436,
+						"h": 2436
 					},
 					"anchor": {
 						"x": 0,
@@ -490,6 +1100,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:5b62a1780d4db93ae26b94e9c35e1cdf:af6028924b79c17e8894c019fd088fbd:af6e57a991ea0b4b415dbcb7eb72ce12$"
+		"smartupdate": "$TexturePacker:SmartUpdate:7818448700027b7edf536b8d766aca1a:ca9ced226899fbce6f663796cbfa7001:3b9f57acaa6820d69245a6432134074c$"
 	}
 }
