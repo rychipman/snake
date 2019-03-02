@@ -18,7 +18,7 @@ MenuScene = new Phaser.Class({
 		this.anims.create({
 			key: 'splash',
 			frames: this.anims.generateFrameNames('sprites', { prefix: 'bg/anisplash/anisplash_', start: 0, end: 19, zeroPad: 2 }),
-			frameRate: 7,
+			frameRate: 10,
 			repeat: -1,
 		});
 		bg.play('splash');

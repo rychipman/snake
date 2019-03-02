@@ -18,7 +18,7 @@ GameScene = new Phaser.Class({
 		this.anims.create({
 			key: 'anibg',
 			frames: this.anims.generateFrameNames('sprites', { prefix: 'bg/aniboard/aniboard_', start: 0, end: 19, zeroPad: 2 }),
-			frameRate: 7,
+			frameRate: 10,
 			repeat: -1,
 		});
 		this.board.play('anibg');
