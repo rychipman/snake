@@ -1,24 +1,29 @@
 #![feature(plugin)]
-#![feature(custom_attribute)]
-#![plugin(rocket_codegen)]
 #![allow(proc_macro_derive_resolution_fallback)]
+#![feature(proc_macro_hygiene, decl_macro)]
 
 extern crate rocket;
-#[macro_use] extern crate rocket_contrib;
-#[macro_use] extern crate diesel;
-#[macro_use] extern crate serde_derive;
+#[macro_use]
+extern crate rocket_contrib;
+#[macro_use]
+extern crate diesel;
+#[macro_use]
+extern crate serde_derive;
 
-mod schema;
 mod db;
 mod models;
+mod schema;
 
-use models::{Score,ScoreInsert,ScoreQuery};
+use models::{Score, ScoreInsert, ScoreQuery};
 
-use rocket::Rocket;
 use rocket::response::NamedFile;
-use rocket_contrib::{Json,Template,Value};
+use rocket::{get, post, routes, Rocket};
+use rocket_contrib::{
+    json::{Json, JsonValue},
+    templates::Template,
+};
 
-use std::path::{Path,PathBuf};
+use std::path::{Path, PathBuf};
 
 #[derive(Serialize)]
 struct TemplateCtx {
@@ -27,7 +32,7 @@ struct TemplateCtx {
 
 #[get("/")]
 fn index(conn: db::Conn) -> Template {
-    let ctx = TemplateCtx{
+    let ctx = TemplateCtx {
         scores: Score::top(10, conn.handler()).unwrap(),
     };
     Template::render("index", &ctx)
@@ -45,19 +50,19 @@ fn files(path: PathBuf) -> Option<NamedFile> {
 }
 
 #[post("/scores/new", format = "application/json", data = "<score>")]
-fn add_score(score: Json<ScoreInsert>, conn: db::Conn) -> Json<Value> {
+fn add_score(score: Json<ScoreInsert>, conn: db::Conn) -> JsonValue {
     let res = Score::insert(score.0, conn.handler());
     let high_scores = Score::top(10, conn.handler()).unwrap();
     match res {
-        Ok(_count) => Json(json!({
+        Ok(_count) => json!({
             "status": "success",
             "id": 2,
             "highScores": high_scores
-        })),
-        Err(err) => Json(json!({
+        }),
+        Err(err) => json!({
             "status": "failed",
             "reason": err.to_string()
-        })),
+        }),
     }
 }
 
@@ -70,8 +75,8 @@ fn rocket() -> Rocket {
     rocket::ignite()
         .manage(db::init_pool())
         .mount("/", routes![index])
-        .mount("/static", routes![files,game_files])
-        .mount("/api", routes![add_score,get_scores])
+        .mount("/static", routes![files, game_files])
+        .mount("/api", routes![add_score, get_scores])
         .attach(Template::fairing())
 }
 
