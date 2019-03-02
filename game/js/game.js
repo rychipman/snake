@@ -47,6 +47,8 @@ GameScene = new Phaser.Class({
 		});
 
 		this.continueMessagePosted = false;
+
+		this.cameras.main.fadeFrom(500, 0, 0, 0);
 	},
 
 	update: function (time, delta) {

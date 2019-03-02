@@ -24,12 +24,16 @@ MenuScene = new Phaser.Class({
 		bg.play('splash');
 
 		var me = this;
-		this.input.on('pointerdown', function (event) {
-			me.scene.start('gameScene');
-		});
-		this.input.keyboard.once('keydown_SPACE', function() {
-			me.scene.start('gameScene');
-		});
+		var nextScene = function() {
+			me.cameras.main.fade(1000, 0, 0, 0, false, function(cam, prg) {
+				if (prg == 1) {
+					me.scene.start('gameScene');
+				}
+			});
+		}
+
+		this.input.on('pointerdown', nextScene);
+		this.input.keyboard.once('keydown_SPACE', nextScene);
     },
 
 });
