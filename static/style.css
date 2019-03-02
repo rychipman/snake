@@ -1,5 +1,9 @@
 
 body {
-	margin: 0;
 	background-color: #585757;
+}
+
+#snake-frame {
+	margin: 0 auto;
+	width: 680px;
 }
