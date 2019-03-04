@@ -42,7 +42,7 @@ GameScene = new Phaser.Class({
 			upY = ptr.y;
 			me.swipeDX = upX - me.downX;
 			me.swipeDY = upY - me.downY;
-			console.log('(dx, dy) = ('+me.swipeDX+', '+me.swipeDY+')');
+			//console.log('(dx, dy) = ('+me.swipeDX+', '+me.swipeDY+')');
 			me.swiped = true;
 		});
 
