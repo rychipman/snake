@@ -1187,86 +1187,11 @@
 			"image": "sprites-3.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 758,
-				"h": 111
+				"w": 1262,
+				"h": 26
 			},
 			"scale": 1,
 			"frames": [
-				{
-					"filename": "bg/splash-info",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 680,
-						"h": 15
-					},
-					"spriteSourceSize": {
-						"x": 9,
-						"y": 1,
-						"w": 664,
-						"h": 14
-					},
-					"frame": {
-						"x": 1,
-						"y": 1,
-						"w": 664,
-						"h": 14
-					},
-					"anchor": {
-						"x": 0,
-						"y": 0
-					}
-				},
-				{
-					"filename": "bg/play-snake",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 438,
-						"h": 70
-					},
-					"spriteSourceSize": {
-						"x": 27,
-						"y": 0,
-						"w": 381,
-						"h": 67
-					},
-					"frame": {
-						"x": 1,
-						"y": 17,
-						"w": 381,
-						"h": 67
-					},
-					"anchor": {
-						"x": 0,
-						"y": 0
-					}
-				},
-				{
-					"filename": "bg/play-to-win",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 438,
-						"h": 70
-					},
-					"spriteSourceSize": {
-						"x": 29,
-						"y": 1,
-						"w": 373,
-						"h": 67
-					},
-					"frame": {
-						"x": 384,
-						"y": 17,
-						"w": 373,
-						"h": 67
-					},
-					"anchor": {
-						"x": 0,
-						"y": 0
-					}
-				},
 				{
 					"filename": "snake/body",
 					"rotated": false,
@@ -1283,7 +1208,7 @@
 					},
 					"frame": {
 						"x": 1,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1308,7 +1233,7 @@
 					},
 					"frame": {
 						"x": 27,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1333,7 +1258,7 @@
 					},
 					"frame": {
 						"x": 53,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1358,7 +1283,7 @@
 					},
 					"frame": {
 						"x": 79,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1383,7 +1308,7 @@
 					},
 					"frame": {
 						"x": 105,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1408,7 +1333,7 @@
 					},
 					"frame": {
 						"x": 131,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1433,7 +1358,7 @@
 					},
 					"frame": {
 						"x": 157,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1458,7 +1383,7 @@
 					},
 					"frame": {
 						"x": 183,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1483,7 +1408,7 @@
 					},
 					"frame": {
 						"x": 209,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1508,7 +1433,7 @@
 					},
 					"frame": {
 						"x": 235,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1533,7 +1458,7 @@
 					},
 					"frame": {
 						"x": 261,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1558,7 +1483,7 @@
 					},
 					"frame": {
 						"x": 287,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1583,7 +1508,7 @@
 					},
 					"frame": {
 						"x": 313,
-						"y": 86,
+						"y": 1,
 						"w": 24,
 						"h": 24
 					},
@@ -1608,13 +1533,88 @@
 					},
 					"frame": {
 						"x": 339,
-						"y": 86,
+						"y": 1,
 						"w": 22,
 						"h": 23
 					},
 					"anchor": {
 						"x": 0,
 						"y": 0
+					}
+				},
+				{
+					"filename": "bg/play-snake",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 130,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 116,
+						"h": 21
+					},
+					"frame": {
+						"x": 363,
+						"y": 1,
+						"w": 116,
+						"h": 21
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/play-to-win",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 130,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 114,
+						"h": 21
+					},
+					"frame": {
+						"x": 481,
+						"y": 1,
+						"w": 114,
+						"h": 21
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0
+					}
+				},
+				{
+					"filename": "bg/splash-info",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 680,
+						"h": 15
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 1,
+						"w": 664,
+						"h": 14
+					},
+					"frame": {
+						"x": 597,
+						"y": 1,
+						"w": 664,
+						"h": 14
+					},
+					"anchor": {
+						"x": 0,
+						"y": 1
 					}
 				}
 			]
@@ -1623,6 +1623,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:f69d4700bd5d0b4aef4e64a9dab4178c:25cda34d90365dd94b8a60f0b365bdbc:6ac84a3752deac42b1691ea8bf340da2$"
+		"smartupdate": "$TexturePacker:SmartUpdate:1df29b57f07898f6ab69efb3f7ada7e0:61bc2034e489c96e7d9a558fca4cfec7:6ac84a3752deac42b1691ea8bf340da2$"
 	}
 }

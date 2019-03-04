@@ -23,6 +23,13 @@ MenuScene = new Phaser.Class({
 		});
 		bg.play('splash');
 
+		var info = this.add.image(0, 680, 'sprites', 'bg/splash-info');
+		var play = this.add.image(353, 545, 'sprites', 'bg/play-to-win')
+		play.setSize(100, 100)
+		play.setInteractive()
+			.on('pointerover', function() { play.setFrame('bg/play-snake') })
+			.on('pointerout', function() { play.setFrame('bg/play-to-win') });
+
 		var me = this;
 		var nextScene = function() {
 			me.cameras.main.fade(1000, 0, 0, 0, false, function(cam, prg) {
