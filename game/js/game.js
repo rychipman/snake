@@ -202,6 +202,6 @@ var game = new Phaser.Game({
     width: 680,
     height: 680,
     backgroundColor: '#181b18',
-    parent: 'snake-frame',
+    parent: 'game',
 	scene: [ MenuScene, GameScene, LeaderboardScene ],
 });

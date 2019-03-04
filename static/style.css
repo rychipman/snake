@@ -11,6 +11,20 @@ body {
 	width: 680px;
 	height: 680px;
 	margin: -340px 0 0 -340px;
+}
 
+#game {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 	background-color: #181b18;
+	z-index: -1;
+}
+
+#submit {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #f00;
+	visibility: hidden;
 }
