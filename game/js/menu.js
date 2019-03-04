@@ -63,6 +63,11 @@ LeaderboardScene = new Phaser.Class({
 		this.add.text(16, 16, '(press space to exit)', { fontSize: '16px', color: '#FFF' });
 		this.add.text(16, 48, 'Your Score: ' + window.yourscore, { fontSize: '16px', color: '#FFF' });
 
+		for (var i=0; i<window.highScores.length; i++) {
+			var s = window.highScores[i];
+			this.add.text(16, 80+32*i, 'email: '+s.email+', score: '+s.score, { fontSize: '16px', color: '#FFF' })
+		}
+
 		var me = this;
 		var nextScene = function() {
 			me.scene.start('menuScene');
