@@ -46,25 +46,24 @@ GameScene = new Phaser.Class({
 			me.swiped = true;
 		});
 
-		this.continueMessagePosted = false;
-
+		this.sceneTransitionStarted = false;
 		this.cameras.main.fadeFrom(500, 0, 0, 0);
 	},
 
 	update: function (time, delta) {
 		if (!this.snake.alive) {
-			if (!this.continueMessagePosted) {
+			if (!this.sceneTransitionStarted) {
 				var me = this;
-				var nextScene = function() {
-					yourscore = me.score.score;
-					me.score.submit();
-					me.scene.start('leaderboardScene');
-				};
-
-				this.input.keyboard.once('keydown_SPACE', nextScene);
-				this.input.on('pointerdown', nextScene);
-
-				this.continueMessagePosted = true;
+				yourscore = me.score.score;
+				me.score.submit();
+				setTimeout(function() {
+					me.cameras.main.fade(1000, 0, 0, 0, false, function(cam, prg) {
+						if (prg == 1) {
+							me.scene.start('leaderboardScene');
+						}
+					});
+				}, 1000);
+				this.sceneTransitionStarted = true;
 			}
 			return;
 		}
