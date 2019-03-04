@@ -49,6 +49,20 @@ fn files(path: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("static/").join(path)).ok()
 }
 
+#[get("/scores/top")]
+fn top_scores(conn: db::Conn) -> JsonValue {
+    let res = Score::top(10, conn.handler());
+    match res {
+        Ok(high_scores) => json!({
+            "status": "success",
+            "highScores": high_scores
+        }),
+        Err(err) => json!({
+            "status": "failed",
+            "reason": err.to_string()
+        }),
+    }
+}
 #[post("/scores/new", format = "application/json", data = "<score>")]
 fn add_score(score: Json<ScoreInsert>, conn: db::Conn) -> JsonValue {
     let res = Score::insert(score.0, conn.handler());
@@ -56,7 +70,6 @@ fn add_score(score: Json<ScoreInsert>, conn: db::Conn) -> JsonValue {
     match res {
         Ok(_count) => json!({
             "status": "success",
-            "id": 2,
             "highScores": high_scores
         }),
         Err(err) => json!({
@@ -76,7 +89,7 @@ fn rocket() -> Rocket {
         .manage(db::init_pool())
         .mount("/", routes![index])
         .mount("/static", routes![files, game_files])
-        .mount("/api", routes![add_score, get_scores])
+        .mount("/api", routes![add_score, get_scores, top_scores])
         .attach(Template::fairing())
 }
 

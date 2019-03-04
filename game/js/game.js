@@ -50,19 +50,47 @@ GameScene = new Phaser.Class({
 		this.cameras.main.fadeFrom(500, 0, 0, 0);
 	},
 
+    getScores: function(success, failure) {
+		var request = new XMLHttpRequest();
+		request.open('GET', '/api/scores/top', true);
+
+		request.onreadystatechange = function() {
+			if (this.readyState === 4) {
+				if (this.status >= 200 && this.status < 400) {
+					var data = JSON.parse(this.responseText);
+					if (data.status === "failed") {
+						console.log("get scores failed");
+						failure();
+					} else {
+						console.log("get scores successful");
+						highScores = data.highScores;
+						success();
+					}
+				} else {
+					console.log("get scores")
+				}
+			}
+		};
+
+		request.send();
+	},
+
 	update: function (time, delta) {
 		if (!this.snake.alive) {
 			if (!this.sceneTransitionStarted) {
 				var me = this;
 				yourscore = me.score.score;
-				me.score.submit();
-				setTimeout(function() {
-					me.cameras.main.fade(1000, 0, 0, 0, false, function(cam, prg) {
-						if (prg == 1) {
-							me.scene.start('leaderboardScene');
-						}
-					});
-				}, 1000);
+				me.getScores(function() {
+					setTimeout(function() {
+						me.cameras.main.fade(1000, 0, 0, 0, false, function(cam, prg) {
+							if (prg == 1) {
+								me.scene.start('leaderboardScene');
+							}
+						});
+					}, 1000);
+				}, function() {
+					me.scene.start('menuScene');
+				});
 				this.sceneTransitionStarted = true;
 			}
 			return;
