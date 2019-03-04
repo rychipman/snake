@@ -58,14 +58,13 @@ LeaderboardScene = new Phaser.Class({
 	},
 
     create: function () {
-		this.add.image(0, 0, 'sprites', 'bg/scores');
 		this.cursors = this.input.keyboard.createCursorKeys();
 		this.add.text(16, 16, '(press space to exit)', { fontSize: '16px', color: '#FFF' });
 		this.add.text(16, 48, 'Your Score: ' + window.yourscore, { fontSize: '16px', color: '#FFF' });
 
 		for (var i=0; i<window.highScores.length; i++) {
 			var s = window.highScores[i];
-			this.add.text(16, 80+32*i, 'email: '+s.email+', score: '+s.score, { fontSize: '16px', color: '#FFF' })
+			this.add.text(16, 80+32*i, ''+s.score+' - '+s.email, { fontSize: '16px', color: '#FFF' })
 		}
 
 		var me = this;

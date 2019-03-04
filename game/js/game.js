@@ -173,7 +173,7 @@ var game = new Phaser.Game({
     type: Phaser.WEBGL,
     width: 680,
     height: 680,
-    backgroundColor: '#eeeeee',
+    backgroundColor: '#181b18',
     parent: 'snake-frame',
 	scene: [ MenuScene, GameScene, LeaderboardScene ],
 });
