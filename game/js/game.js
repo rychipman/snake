@@ -53,6 +53,7 @@ GameScene = new Phaser.Class({
     getScores: function(success, failure) {
 		var request = new XMLHttpRequest();
 		request.open('GET', '/api/scores/top', true);
+		request.timeout = 3000;
 
 		request.onreadystatechange = function() {
 			if (this.readyState === 4) {
