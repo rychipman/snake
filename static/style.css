@@ -4,6 +4,13 @@ body {
 }
 
 #snake-frame {
-	margin: 0 auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
 	width: 680px;
+	height: 680px;
+	margin: -340px 0 0 -340px;
+
+	background-color: #181b18;
 }
