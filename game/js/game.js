@@ -59,7 +59,7 @@ GameScene = new Phaser.Class({
 					me.cameras.main.fade(500, 9, 11, 9, false, function(cam, prg) {
 						if (prg == 1) {
 							showSubmitForm(function() {
-								me.scene.start('leaderboardScene');
+								me.scene.start('menuScene');
 							});
 						}
 					});
@@ -216,22 +216,28 @@ function showSubmitForm(callback) {
 	}
 
 	var game = document.getElementById('game');
-	var parent = game.parentNode;
-	parent.removeChild(game);
+	var submit = document.getElementById('submit');
+	var leaderboard = document.getElementById('leaderboard');
 
-	var finish = function() {
-		parent.appendChild(game);
-		callback();
-	};
+	var parent = game.parentNode;
 
 	var submitBtn = document.getElementById('submit-btn');
-
 	submitBtn.onclick = function() {
 		yourname = nameInput.value;
 		youremail = emailInput.value;
-		submitScore(finish);
+		submitScore(function() {
+			parent.removeChild(submit);
+		});
 	};
-}
+
+	parent.removeChild(game);
+
+	leaderboard.onclick = function() {
+		parent.appendChild(submit);
+		parent.appendChild(game);
+		callback();
+	};
+};
 
 
 var game = new Phaser.Game({
