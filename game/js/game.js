@@ -245,11 +245,12 @@ function showSubmitForm(callback) {
 		nameInput.select();
 	}
 
-	var submitForm = document.getElementById('submit');
-	submitForm.style.zIndex = 3;
+	var game = document.getElementById('game');
+	var parent = game.parentNode;
+	parent.removeChild(game);
 
 	var finish = function() {
-		submitForm.style.zIndex = 1;
+		parent.appendChild(game);
 		callback();
 	};
 
