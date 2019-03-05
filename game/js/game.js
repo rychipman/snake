@@ -227,16 +227,24 @@ function showSubmitForm(callback) {
 		youremail = emailInput.value;
 		submitScore(function() {
 			var scores = document.getElementById('scores-container');
-			scores.parentNode.removeChild(scores);
+			var scoresParent = scores.parentNode;
+			scoresParent.removeChild(scores);
 			scores = document.createElement('div');
 			scores.id = 'scores-container';
 			for (var i=0; i<window.highScores.length; i++) {
 				var s = window.highScores[i];
 				var p = document.createElement('p');
-				p.innerHTML = ''+s.score+' - '+s.email;
+				var num = document.createElement('span');
+				num.innerHTML = ''+s.score;
+				num.className = 'lbscore';
+				var name = document.createElement('span');
+				name.innerHTML = s.email;
+				name.className = 'lbname';
+				p.appendChild(num);
+				p.appendChild(name);
 				scores.appendChild(p);
 			}
-			leaderboard.appendChild(scores);
+			scoresParent.appendChild(scores);
 			parent.removeChild(submit);
 		});
 	};

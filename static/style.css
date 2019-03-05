@@ -47,8 +47,9 @@ body {
 	background-color: #181b18;
 	color: white;
 	font-family: monospace;
-	padding-top: 175px;
+	padding-top: 60px;
 	box-sizing: border-box;
+	text-align: center;
 }
 
 #lb-header {
@@ -56,10 +57,16 @@ body {
 	font-family: monospace;
 	font-size: 48px;
 	margin: 0 auto;
-	margin-bottom: 50px;
 	text-align: center;
 }
 
+#lb-subtitle {
+	margin-bottom: 40px;
+}
+
+#lb-footer {
+	margin-top: 100px;
+}
 
 .text-field {
 	color: white;
@@ -95,4 +102,22 @@ button {
 
 button:hover {
 	font-weight: bold;
+}
+
+a {
+	color: yellow;
+}
+
+.lbscore {
+	color: yellow;
+	font-size: 18px;
+	margin-right: 20px;
+}
+
+.lbname {
+
+}
+
+#scores-container {
+	text-align: center;
 }
