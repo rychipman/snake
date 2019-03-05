@@ -85,7 +85,9 @@ GameScene = new Phaser.Class({
 					setTimeout(function() {
 						me.cameras.main.fade(1000, 0, 0, 0, false, function(cam, prg) {
 							if (prg == 1) {
-								me.scene.start('leaderboardScene');
+								showSubmitForm(function() {
+									me.scene.start('leaderboardScene');
+								});
 							}
 						});
 					}, 1000);
@@ -195,6 +197,62 @@ GameScene = new Phaser.Class({
 	},
 
 });
+
+function submitScore(callback) {
+	var data = {
+		score: window.yourscore,
+		email: window.youremail,
+	};
+
+	var request = new XMLHttpRequest();
+	request.open('POST', '/api/scores/new', true);
+	request.setRequestHeader('Content-Type', 'application/json');
+
+	request.onreadystatechange = function() {
+		if (this.readyState === 4) {
+			if (this.status >= 200 && this.status < 400) {
+				var data = JSON.parse(this.responseText);
+				if (data.status === "failed") {
+					console.log("score submit failed");
+					callback();
+				} else {
+					console.log("score submit successful");
+					highScores = data.highScores;
+					callback();
+				}
+			} else {
+				console.log("score submit failed")
+				callback();
+			}
+		}
+	};
+
+	request.send(JSON.stringify(data));
+}
+
+function showSubmitForm(callback) {
+	var nameInput = document.getElementById('name');
+	var emailInput = document.getElementById('email');
+
+	nameInput.value = window.yourname;
+	emailInput.value = window.youremail;
+
+	var submitForm = document.getElementById('submit');
+	submitForm.style.visibility = 'visible';
+
+	var finish = function() {
+		submitForm.style.visibility = 'hidden';
+		callback();
+	};
+
+	var submitBtn = document.getElementById('submit-btn');
+
+	submitBtn.onclick = function() {
+		yourname = nameInput.value;
+		youremail = emailInput.value;
+		submitScore(finish);
+	};
+}
 
 
 var game = new Phaser.Game({
