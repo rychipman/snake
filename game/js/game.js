@@ -238,10 +238,10 @@ function showSubmitForm(callback) {
 	emailInput.value = window.youremail;
 
 	var submitForm = document.getElementById('submit');
-	submitForm.style.visibility = 'visible';
+	submitForm.style.zIndex = 1;
 
 	var finish = function() {
-		submitForm.style.visibility = 'hidden';
+		submitForm.style.zIndex = -1;
 		callback();
 	};
 

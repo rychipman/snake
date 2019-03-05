@@ -18,7 +18,7 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: #181b18;
-	z-index: -1;
+	z-index: 0;
 }
 
 #submit {
@@ -26,5 +26,5 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: #f00;
-	visibility: hidden;
+	z-index: -1;
 }
