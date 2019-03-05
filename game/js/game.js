@@ -172,6 +172,7 @@ function submitScore(callback) {
 	var data = {
 		score: window.yourscore,
 		email: window.youremail,
+		username: window.yourname,
 	};
 
 	var request = new XMLHttpRequest();
@@ -238,7 +239,7 @@ function showSubmitForm(callback) {
 				num.innerHTML = ''+s.score;
 				num.className = 'lbscore';
 				var name = document.createElement('span');
-				name.innerHTML = s.email;
+				name.innerHTML = s.username;
 				name.className = 'lbname';
 				p.appendChild(num);
 				p.appendChild(name);
