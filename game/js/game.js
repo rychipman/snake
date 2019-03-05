@@ -237,6 +237,9 @@ function showSubmitForm(callback) {
 	nameInput.value = window.yourname;
 	emailInput.value = window.youremail;
 
+	nameInput.focus();
+	nameInput.select();
+
 	var submitForm = document.getElementById('submit');
 	submitForm.style.zIndex = 1;
 
