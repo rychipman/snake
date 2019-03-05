@@ -226,6 +226,16 @@ function showSubmitForm(callback) {
 		yourname = nameInput.value;
 		youremail = emailInput.value;
 		submitScore(function() {
+			var scores = document.getElementById('scores-container');
+			scores.parentNode.removeChild(scores);
+			scores = document.createElement('div');
+			for (var i=0; i<window.highScores.length; i++) {
+				var s = window.highScores[i];
+				var p = document.createElement('p');
+				p.innerHTML = ''+s.score+' - '+s.email;
+				scores.appendChild(p);
+			}
+			leaderboard.appendChild(scores);
 			parent.removeChild(submit);
 		});
 	};
