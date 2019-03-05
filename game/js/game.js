@@ -243,7 +243,10 @@ function showSubmitForm(callback) {
 
 	parent.removeChild(game);
 
-	leaderboard.onclick = function() {
+	leaderboard.onclick = function(e) {
+		if (e.target.tagName === "A") {
+			return;
+		}
 		parent.appendChild(submit);
 		parent.appendChild(game);
 		callback();
