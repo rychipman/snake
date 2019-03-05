@@ -234,8 +234,8 @@ function showSubmitForm(callback) {
 	var nameInput = document.getElementById('name');
 	var emailInput = document.getElementById('email');
 
-	nameInput.value = window.yourname;
-	emailInput.value = window.youremail;
+	nameInput.value = window.yourname ? window.yourname : 'Your Name';
+	emailInput.value = window.youremail ? window.youremail : 'email@example.com';
 
 	nameInput.focus();
 	nameInput.select();
