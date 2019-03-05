@@ -246,10 +246,10 @@ function showSubmitForm(callback) {
 	}
 
 	var submitForm = document.getElementById('submit');
-	submitForm.style.zIndex = 1;
+	submitForm.style.zIndex = 3;
 
 	var finish = function() {
-		submitForm.style.zIndex = -1;
+		submitForm.style.zIndex = 1;
 		callback();
 	};
 
