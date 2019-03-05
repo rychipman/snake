@@ -38,12 +38,8 @@ body {
 	font-family: monospace;
 	font-size: 96px;
 	margin: 0 auto;
+	margin-bottom: 50px;
 	text-align: center;
-}
-
-#score-header-text {
-	display: inline-block;
-	margin-top: 25px;
 }
 
 .text-field {

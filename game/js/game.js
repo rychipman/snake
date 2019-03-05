@@ -231,7 +231,7 @@ function submitScore(callback) {
 }
 
 function showSubmitForm(callback) {
-	var scoreHeader = document.getElementById('score-header-text');
+	var scoreHeader = document.getElementById('score-header');
 	scoreHeader.innerHTML = '' + window.yourscore;
 
 	var nameInput = document.getElementById('name');
