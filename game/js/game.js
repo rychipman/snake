@@ -229,6 +229,7 @@ function showSubmitForm(callback) {
 			var scores = document.getElementById('scores-container');
 			scores.parentNode.removeChild(scores);
 			scores = document.createElement('div');
+			scores.id = 'scores-container';
 			for (var i=0; i<window.highScores.length; i++) {
 				var s = window.highScores[i];
 				var p = document.createElement('p');
