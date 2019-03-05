@@ -240,8 +240,10 @@ function showSubmitForm(callback) {
 	nameInput.value = window.yourname ? window.yourname : 'Your Name';
 	emailInput.value = window.youremail ? window.youremail : 'email@example.com';
 
-	nameInput.focus();
-	nameInput.select();
+	if (!window.yourname) {
+		nameInput.focus();
+		nameInput.select();
+	}
 
 	var submitForm = document.getElementById('submit');
 	submitForm.style.zIndex = 1;
